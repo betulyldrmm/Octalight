@@ -7,7 +7,7 @@
   min-height: 100vh;
 }
 
-/* Breadcrumb Navigation */
+
 .breadcrumb {
   display: flex;
   align-items: center;
@@ -18,7 +18,7 @@
   text-transform: uppercase;
 }
 
-/* Ana Sayfa ve Koleksiyon Linkleri */
+
 .breadcrumb-item {
   color: #999;
   text-decoration: none;
@@ -32,13 +32,11 @@
   text-decoration: underline;
 }
 
-/* Breadcrumb ayracı */
 .breadcrumb-separator {
   margin: 0 10px;
   color: #999;
 }
 
-/* Main Title */
 .main-title {
   font-size: 72px;
   font-weight: 900;
@@ -49,7 +47,7 @@
   line-height: 1.1;
 }
 
-/* Subtitle */
+
 .subtitle {
   font-size: 26px;
   color: #666;
@@ -58,7 +56,7 @@
   font-style: italic;
 }
 
-/* Filter Section */
+
 .filter-section {
   display: flex;
   align-items: flex-end;
@@ -134,7 +132,7 @@
   text-transform: uppercase;
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
   .koleksiyon-container {
     padding: 15px;

@@ -7,20 +7,20 @@ const Koleksiyon = () => {
     <>
    <Header></Header>
     <div className="koleksiyon-container">
-      {/* Breadcrumb Navigation */}
+     
       <div className="breadcrumb">
         <span className="breadcrumb-item">ANASAYFA</span>
         <span className="breadcrumb-separator">/</span>
         <span className="breadcrumb-item">KOLEKSİYON</span>
       </div>
 
-      {/* Main Title */}
+
       <h1 className="main-title">TÜM ÜRÜNLER</h1>
       
-      {/* Subtitle */}
+
       <p className="subtitle">Çeşitlilikte enginlik.</p>
 
-      {/* Filter Section */}
+    
       <div className="filter-section">
         <div className="filter-left">
           <span className="filter-label">FİLTRELER</span>
