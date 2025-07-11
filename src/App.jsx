@@ -13,7 +13,6 @@ import DonmeDolapKarti from './components/DonmeDolapKarti';
 import CookieBanner from './components/CookieBanner';
 import Header from './components/Header';
 import About from './components/About';
-import Hakkinda from './components/Hakkinda'; // magazalar için
 
 import ScrollToTop from './components/ScrollToTop';
 
@@ -82,9 +81,9 @@ const App = () => {
             <Route path="/pearls" element={<Pearls />} />
             <Route path="/ronmite" element={<Ronmite />} />
 
-            {/* Hakkımızda ve Mağazalar */}
+            {/* Hakkımızda */}
             <Route path="/hakkimizda" element={<About />} />
-            <Route path="/magazalar" element={<Hakkinda />} />
+           
           </Routes>
         </main>
 
