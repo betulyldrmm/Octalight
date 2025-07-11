@@ -87,7 +87,7 @@ const Golden = () => {
           <span className="sidebar-text">Anasayfa</span>
         </Link>
         <Link to="/koleksiyon" className="sidebar-item">
-          <FaList className="sidebar-icon" /> {/* FaList ikonu burada */}
+          <FaList className="sidebar-icon" />
           <span className="sidebar-text">Koleksiyon</span>
         </Link>
         <div className="sidebar-item active">
@@ -121,14 +121,13 @@ const Golden = () => {
           </div>
         </div>
 
-        {/* Golden Hour Collection Story */}
         <div className="collection-story">
           <div className="story-content">
             <h3 className="story-title" data-aos="fade-up">GOLDEN HOUR</h3>
           </div>
           
           <div className="story-images-new">
-            {/* İlk resim - Sol */}
+           
             <div className="image-text-section" data-aos="fade-up" data-aos-delay="200">
               <div className="image-container">
                 <img src={foto1} alt="Golden Hour Koleksiyonu" className="story-image-new" />
@@ -143,7 +142,6 @@ const Golden = () => {
               </div>
             </div>
 
-            {/* İkinci resim - Sağ */}
             <div className="image-text-section reverse" data-aos="fade-up" data-aos-delay="400">
               <div className="image-container">
                 <img src={foto2} alt="Golden Hour Tasarım" className="story-image-new" />
@@ -158,7 +156,7 @@ const Golden = () => {
               </div>
             </div>
 
-            {/* Üçüncü resim - Sol */}
+         
             <div className="image-text-section" data-aos="fade-up" data-aos-delay="600">
               <div className="image-container">
                 <img src={foto3} alt="Golden Hour Detay" className="story-image-new" />

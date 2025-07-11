@@ -20,10 +20,10 @@ import isik3 from '../../assets/isik3.jpg';
 const Golden = () => {
   const [currentSliderIndex, setCurrentSliderIndex] = useState(0);
 
-  // Slider resimleri
+ 
   const sliderImages = [isikii, isik1, isik2, isik3, isik1, isik2];
 
-  // AOS başlatılıyor
+  
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -32,14 +32,14 @@ const Golden = () => {
     });
   }, []);
 
-  // Slider otomatik geçiş
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSliderIndex((prevIndex) => {
         const nextIndex = prevIndex === sliderImages.length - 1 ? 0 : prevIndex + 1;
         return nextIndex;
       });
-    }, 5000); // 5 saniye
+    }, 5000); 
 
     return () => clearInterval(interval);
   }, [sliderImages.length]);
@@ -52,8 +52,8 @@ const Golden = () => {
 
   const heroImage = foto1;
 
-  const slideWidth = 320; // px olarak slider genişliği
-  const gap = 25; // px olarak slide arası boşluk
+  const slideWidth = 320; 
+  const gap = 25;
   const slideCount = sliderImages.length;
   const trackWidth = (slideWidth + gap) * slideCount;
 
@@ -94,7 +94,7 @@ const Golden = () => {
           </div>
         </div>
 
-        {/* Golden Hour Collection Story */}
+        
         <div className="collection-story">
           <div className="story-content">
             <h3 className="story-title" data-aos="fade-up">
@@ -102,7 +102,7 @@ const Golden = () => {
             </h3>
           </div>
 
-          {/* Slider Section */}
+     
           <div className="slider-section" data-aos="fade-up" data-aos-delay="100">
             <div className="slider-main-container">
               <div className="main-slider">
@@ -130,7 +130,7 @@ const Golden = () => {
                   </div>
                 </div>
 
-                {/* Slider Dots */}
+        
                 <div className="slider-dots">
                   {sliderImages.map((_, index) => (
                     <button
@@ -143,7 +143,7 @@ const Golden = () => {
                 </div>
               </div>
 
-              {/* Açıklama - Slider Altında */}
+             
               <div className="slider-description">
                 <p className="description-text">
                   Günün en büyülü anlarını yaşam alanlarınıza taşıyan Golden Hour koleksiyonu, sıcak altın tonlarının zarafetini modern tasarımla buluşturuyor
@@ -155,7 +155,7 @@ const Golden = () => {
           </div>
 
           <div className="story-container">
-            {/* İlk Kutu */}
+       
             <div className="content-box" data-aos="fade-up" data-aos-delay="200">
               <div className="image-section">
                 <img src={foto1} alt="Golden Hour Koleksiyonu" className="content-image" />
@@ -167,7 +167,7 @@ const Golden = () => {
               </div>
             </div>
 
-            {/* İkinci Kutu */}
+       
             <div className="content-box" data-aos="fade-up" data-aos-delay="400">
               <div className="image-section">
                 <img src={foto2} alt="Golden Hour Tasarım" className="content-image" />
@@ -179,7 +179,7 @@ const Golden = () => {
               </div>
             </div>
 
-            {/* Üçüncü Kutu */}
+       
             <div className="content-box" data-aos="fade-up" data-aos-delay="600">
               <div className="image-section">
                 <img src={foto3} alt="Golden Hour Detay" className="content-image" />

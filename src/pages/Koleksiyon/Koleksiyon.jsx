@@ -6,7 +6,7 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { Link } from 'react-router-dom';
 
-// Lamba görselleri
+
 import isikHero from '../../assets/isiki.jpg';
 import goldenHour from '../../assets/1.jpg';
 import nest from '../../assets/2.jpg';
@@ -29,7 +29,7 @@ const Koleksiyon = () => {
     { id: 'ironmute',description:" Endüstriyel tasarımın gücü ile minimalist estetiğin zarafeti.." ,image: ironmute, route: '/ironmute', kategori: 'Ironmute' },
   ];
 
-  // Scroll down fonksiyonu
+
   const scrollToContent = () => {
     const koleksiyonContainer = document.querySelector('.koleksiyon-container');
     if (koleksiyonContainer) {
@@ -44,14 +44,13 @@ const Koleksiyon = () => {
     <>
       <Header />
 
-      {/* Hero görsel alanı */}
+    
       <div
         className="koleksiyon-hero"
         style={{
           backgroundImage: `url(${isikHero})`,
         }}
       >
-        {/* Scroll Down Oku */}
         <div className="scroll-down-container" onClick={scrollToContent}>
           <div className="scroll-down-arrow">
             <svg width="80" height="120" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -67,7 +66,6 @@ const Koleksiyon = () => {
           <p>IŞIĞIN SANATLA BULUŞTUĞU EŞSİZ TASARIMLAR</p>
         </div>
 
-        {/* Yan yana layout için yeni grid */}
         <div className="koleksiyon-grid">
          
           {lambalar.map((lamba, index) => (
@@ -79,7 +77,7 @@ const Koleksiyon = () => {
               data-aos-delay={index * 100}
               
             >
-              {/* Sol taraf - Metin içeriği */}
+           
               <div className="item-content-left">
                 <h2 className="kategori-baslik-left">{lamba.kategori}</h2>
                 <h1 className='kategori-description'>{lamba.description}</h1>
@@ -88,7 +86,7 @@ const Koleksiyon = () => {
                 </Link>
               </div>
 
-              {/* Sağ taraf - Resim */}
+          
               <div className="item-image-container-right">
                  
                 <img
