@@ -1,179 +1,343 @@
-.koleksiyon-container {
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 20px;
-  font-family: 'Arial', sans-serif;
-  background-color: #f5f5f5;
-  min-height: 100vh;
+body {
+  font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #DAD9D4;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
 }
 
-
-.breadcrumb {
+.koleksiyon-hero {
+  background-image: url('../assets/isiki.jpg'); 
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
-  margin-bottom: 40px;
-  font-size: 18px;
-  color: #999;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-
-
-.breadcrumb-item {
-  color: #999;
-  text-decoration: none;
-  font-weight: 400;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-.breadcrumb-item:hover {
-  color: #0070f3;
-  text-decoration: underline;
-}
-
-.breadcrumb-separator {
-  margin: 0 10px;
-  color: #999;
-}
-
-.main-title {
-  font-size: 72px;
-  font-weight: 900;
-  color: #000;
-  margin: 0 0 20px 0;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  line-height: 1.1;
-}
-
-
-.subtitle {
-  font-size: 26px;
-  color: #666;
-  margin: 0 0 80px 0;
-  font-weight: 300;
-  font-style: italic;
-}
-
-
-.filter-section {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  padding: 40px 0;
-  border-top: 1px solid #ddd;
-  margin-top: 40px;
-}
-
-.filter-left {
-  flex: 1;
-}
-
-.filter-label {
-  font-size: 20px;
-  color: #999;
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-
-.filter-center {
-  display: flex;
-  gap: 60px;
-  flex: 2;
   justify-content: center;
 }
 
-.filter-dropdown {
+.koleksiyon-hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(35, 35, 35, 0.2); 
+  z-index: 2;
+}
+
+
+.scroll-down-container {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   flex-direction: column;
-  gap: 8px;
-}
-
-.dropdown-label {
-  font-size: 20px;
-  color: #999;
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-
-.dropdown-select {
-  border: none;
-  background: transparent;
-  font-size: 28px;
-  color: #000;
-  font-weight: 600;
+  align-items: center;
   cursor: pointer;
-  appearance: none;
-  padding: 8px 20px 8px 0;
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8"><path d="M6 8L0 0h12z" fill="%23000"/></svg>');
-  background-repeat: no-repeat;
-  background-position: right center;
-  background-size: 12px 8px;
-  min-width: 120px;
+  z-index: 10;
+  transition: all 0.3s ease;
 }
 
-.dropdown-select:focus {
-  outline: none;
+.scroll-down-container:hover {
+  transform: translateX(-50%) translateY(-5px);
 }
 
-.filter-right {
+.scroll-down-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+  transition: all 0.3s ease;
+  animation: bounce 2s infinite;
+}
+
+.scroll-down-arrow svg {
+  color: rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+}
+
+.scroll-down-container:hover .scroll-down-arrow {
+  border-color: #fff;
+}
+
+.scroll-down-container:hover .scroll-down-arrow svg {
+  color: #fff;
+}
+
+/* Bounce animasyonu */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.koleksiyon-container {
+  padding-top: 120px;
+  padding-bottom: 200px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: #232323;
+  min-height: 100vh;
+  position: relative;
+  z-index: 3;
+}
+
+.koleksiyon-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(218, 217, 212, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(137, 137, 137, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.koleksiyon-header {
+  text-align: center;
+  margin-bottom: 80px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.koleksiyon-header h1 {
+  font-size: clamp(7rem, 7vw, 5rem); /* Responsive ve büyük ekranlarda uyumlu */
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 24px;
+  font-family: 'Outfit', 'Poppins', sans-serif;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+}
+.koleksiyon-header p {
+  font-size: clamp(1rem, 3vw, 1rem); /* Responsive ve büyük ekranlarda uyumlu */
+  font-weight: 200;
+  color: #ffffff;
+  margin-bottom: 24px;
+  font-family: 'Outfit', 'Poppins', sans-serif;
+  
+ 
+  text-align: center;
+  text-transform: uppercase;
+}
+.kategori-description {
+  color: #e0e0e0;
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  font-family: 'Outfit', 'Poppins', sans-serif;
+  font-weight: 400;
+
+  line-height: 1.6;
+ 
+  max-width: 500px;
+}
+
+
+
+.koleksiyon-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
+.koleksiyon-item {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  background: transparent;
+  padding: 40px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.4s ease;
+}
+
+.koleksiyon-item:hover {
+  transform: translateX(10px);
+}
+
+.koleksiyon-item:last-child {
+  border-bottom: none;
+}
+
+
+.item-content-left {
   flex: 1;
-  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-right: 40px;
 }
 
-.product-count {
-  font-size: 12px;
-  color: #999;
-  font-weight: 500;
-  letter-spacing: 1px;
+.kategori-baslik-left {
+  font-size: 5rem;
+  font-weight: 700;
+  color: #fffcfc;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: -1px;
+  line-height: 1.2;
   text-transform: uppercase;
 }
 
+.item-link-left {
+  display: inline-block;
+  padding: 20px 40px;
+  background: transparent;
+  color: #FCFCFC;
+  font-size: 1.3rem;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(252, 252, 252, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.item-link-left::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: #FCFCFC;
+  transition: left 0.3s ease;
+  z-index: -1;
+}
+
+.item-link-left:hover {
+  color: #090909;
+  border-color: #FCFCFC;
+}
+
+.item-link-left:hover::before {
+  left: 0;
+}
+
+
+.item-image-container-right {
+  flex: 1;
+  position: relative;
+  height: 750px;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.item-image-right {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+  filter: brightness(0.9) saturate(0.95);
+}
+
+.koleksiyon-item:hover .item-image-right {
+  transform: scale(1.05);
+  filter: brightness(1) saturate(1);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .koleksiyon-container {
+    padding: 100px 30px 150px 30px;
+  }
+
+  .koleksiyon-item {
+    gap: 40px;
+  }
+
+  .item-content-left {
+    padding-right: 20px;
+  }
+
+  .kategori-baslik-left {
+    font-size: 2.5rem;
+  }
+
+  .koleksiyon-header h1 {
+    font-size: 3rem;
+  }
+}
 
 @media (max-width: 768px) {
   .koleksiyon-container {
-    padding: 15px;
-  }
-  
-  .main-title {
-    font-size: 40px;
-    letter-spacing: 2px;
-  }
-  
-  .subtitle {
-    font-size: 14px;
-    margin-bottom: 40px;
+    padding: 80px 20px 100px 20px;
   }
 
-  .filter-section {
+  .koleksiyon-item {
     flex-direction: column;
-    gap: 20px;
-    align-items: flex-start;
-    padding: 30px 0;
+    gap: 30px;
+    text-align: center;
   }
-  
-  .filter-center {
-    flex-direction: column;
-    gap: 20px;
-    width: 100%;
+
+  .item-content-left {
+    padding-right: 0;
+    align-items: center;
   }
-  
-  .filter-right {
-    text-align: left;
-    width: 100%;
+
+  .kategori-baslik-left {
+    font-size: 2rem;
+  }
+
+  .koleksiyon-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .koleksiyon-header p {
+    font-size: 1rem;
+  }
+
+  .item-image-container-right {
+    height: 300px;
   }
 }
 
 @media (max-width: 480px) {
-  .main-title {
-    font-size: 32px;
-    letter-spacing: 1px;
+  .koleksiyon-container {
+    padding: 60px 15px 80px 15px;
   }
-  
-  .filter-center {
-    gap: 15px;
+
+  .koleksiyon-grid {
+    gap: 40px;
+  }
+
+  .kategori-baslik-left {
+    font-size: 1.5rem;
+  }
+
+  .koleksiyon-header h1 {
+    font-size: 2rem;
+  }
+
+  .item-link-left {
+    padding: 12px 30px;
+    font-size: 1rem;
+  }
+
+  .item-image-container-right {
+    height: 250px;
   }
 }

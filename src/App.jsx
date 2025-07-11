@@ -1,21 +1,27 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
-
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import Koleksiyon from './pages/Koleksiyon/Koleksiyon';
 
-
-const App = () => {
+import Golden from './pages/Golden/Golden';
+import Nest from './pages/Nest/Nest';
+import Pearls from './pages/Pearls/Pearls';
+import Ronmite from './pages/Ronmite/Ronmite';
+function App() {
   return (
-    <BrowserRouter>
-   
+    <Router>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path='/Koleksiyon' element={<Koleksiyon/>}/>
-
+        <Route path="/koleksiyon" element={<Koleksiyon />} />
+        <Route path="/golden" element={<Golden />} />
+             <Route path="/nest" element={<Nest />} />
+       <Route path="/pearls" element={<Pearls />} />
+          <Route path="/ronmite" element={<Ronmite />} />
       </Routes>
-    </BrowserRouter>
+    </Router>
   );
-};
+}
 
 export default App;

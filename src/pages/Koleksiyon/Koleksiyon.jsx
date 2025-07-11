@@ -1,54 +1,111 @@
-import React from 'react'
-import './Koleksiyon.css'
-import Header from '../../components/Header'
+import React, { useEffect } from 'react';
+import './Koleksiyon.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import { Link } from 'react-router-dom';
+
+// Lamba görselleri
+import isikHero from '../../assets/isiki.jpg';
+import goldenHour from '../../assets/1.jpg';
+import nest from '../../assets/2.jpg';
+import pearls from '../../assets/3.jpg';
+import ironmute from '../../assets/4.jpg';
 
 const Koleksiyon = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 600,
+      once: true,
+      easing: 'ease-out',
+    });
+  }, []);
+
+  const lambalar = [
+    { id: 'golden-hour',description:"Sıcak altın tonlarının zarafeti..", image: goldenHour, route: '/golden', kategori: 'Golden Hour' },
+    { id: 'nest',description:"Doğanın organik formlarından ilham alan Nest koleksiyonu..", image: nest, route: '/nest', kategori: 'Nest' },
+    { id: 'pearls', description:" Zarafetin ve lüksün simgesi olan inci..",image: pearls, route: '/pearls', kategori: 'Pearls' },
+    { id: 'ironmute',description:" Endüstriyel tasarımın gücü ile minimalist estetiğin zarafeti.." ,image: ironmute, route: '/ironmute', kategori: 'Ironmute' },
+  ];
+
+  // Scroll down fonksiyonu
+  const scrollToContent = () => {
+    const koleksiyonContainer = document.querySelector('.koleksiyon-container');
+    if (koleksiyonContainer) {
+      koleksiyonContainer.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
   return (
     <>
-   <Header></Header>
-    <div className="koleksiyon-container">
-     
-      <div className="breadcrumb">
-        <span className="breadcrumb-item">ANASAYFA</span>
-        <span className="breadcrumb-separator">/</span>
-        <span className="breadcrumb-item">KOLEKSİYON</span>
-      </div>
+      <Header />
 
-
-      <h1 className="main-title">TÜM ÜRÜNLER</h1>
-      
-
-      <p className="subtitle">Çeşitlilikte enginlik.</p>
-
-    
-      <div className="filter-section">
-        <div className="filter-left">
-          <span className="filter-label">FİLTRELER</span>
-        </div>
-        
-        <div className="filter-center">
-          <div className="filter-dropdown">
-            <span className="dropdown-label">KOLEKSİYON</span>
-            <select className="dropdown-select">
-              <option value="">Tüm Ürünler</option>
-            </select>
-          </div>
-          
-          <div className="filter-dropdown">
-            <span className="dropdown-label">KATEGORİ</span>
-            <select className="dropdown-select">
-              <option value="">Tümü</option>
-            </select>
+      {/* Hero görsel alanı */}
+      <div
+        className="koleksiyon-hero"
+        style={{
+          backgroundImage: `url(${isikHero})`,
+        }}
+      >
+        {/* Scroll Down Oku */}
+        <div className="scroll-down-container" onClick={scrollToContent}>
+          <div className="scroll-down-arrow">
+            <svg width="80" height="120" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 10L12 15L17 10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
           </div>
         </div>
-        
-        <div className="filter-right">
-          <span className="product-count">196 ÜRÜN GÖSTERİLİYOR</span>
-        </div>
       </div>
-    </div>
+
+      <div className="koleksiyon-container">
+        <div className="koleksiyon-header" data-aos="fade-up">
+          <h1>KOLEKSİYONLAR</h1>
+          <p>IŞIĞIN SANATLA BULUŞTUĞU EŞSİZ TASARIMLAR</p>
+        </div>
+
+        {/* Yan yana layout için yeni grid */}
+        <div className="koleksiyon-grid">
+         
+          {lambalar.map((lamba, index) => (
+            
+            <div 
+              key={lamba.id} 
+              className="koleksiyon-item"
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
+              
+            >
+              {/* Sol taraf - Metin içeriği */}
+              <div className="item-content-left">
+                <h2 className="kategori-baslik-left">{lamba.kategori}</h2>
+                <h1 className='kategori-description'>{lamba.description}</h1>
+                <Link to={lamba.route} className="item-link-left">
+                  İncele
+                </Link>
+              </div>
+
+              {/* Sağ taraf - Resim */}
+              <div className="item-image-container-right">
+                 
+                <img
+                  src={lamba.image}
+                  alt={lamba.kategori}
+                  className="item-image-right"
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+        <br></br><br></br>
+      </div>
+
+      <Footer />
     </>
-  )
-}
+  );
+};
 
-export default Koleksiyon
+export default Koleksiyon;
