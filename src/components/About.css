@@ -1,181 +1,188 @@
-.about-overlay-section {
-  position: relative;                    /* İçindeki elemanlara konumlandırma sağlar */
-  background-size: cover;                /* Arka planı tam kaplar */
-  background-position: center;           /* Arka planı ortalar */
-  background-repeat: no-repeat;          /* Arka plan tekrar etmez */
-  height: 100vh;                         /* Tüm ekran yüksekliği */
-  padding: 80px 40px;                    /* Üst-alt 80px, sağ-sol 40px iç boşluk */
-  display: flex;                         /* İçeriği yatay hizalar */
-  align-items: center;                   /* İçeriği dikey ortalar */
-  justify-content: flex-start;           /* İçeriği yatayda sola yaslar */
-}
-
-.about-overlay-text {
-  background-color: rgba(255, 245, 230, 0.95); /* Krem renkli, yarı saydam arka plan */
-  padding: 30px 40px;                          /* Kenarlardan iç boşluk */
-  border-radius: 12px;                         /* Yumuşak köşeler */
-  max-width: 600px;                            /* Maksimum kutu genişliği */
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);  /* Kutunun arkasında gölge efekti */
-  color: #1e1e1e;                              /* Yazı rengi koyu gri */
-  font-family: 'Segoe UI', sans-serif;         /* Yazı tipi */
-  line-height: 1.7;                            /* Satırlar arası boşluk */
-}
-
-.about-overlay-text h2 {
-  font-size: 26px;                            /* Başlık boyutu */
-  font-weight: bold;                          /* Kalın yazı */
-  margin-bottom: 10px;                        /* Alt boşluk */
-}
-
-.about-overlay-text hr {
-  border: none;                               /* Kenarlık yok */
-  height: 2px;                                /* Çizgi kalınlığı */
-  background-color: #1e1e1e;                  /* Çizgi rengi */
-  width: 50px;                                /* Çizgi uzunluğu */
-  margin: 12px 0 20px;                        /* Üst-alt boşluk */
-}
-
-.about-overlay-text p {
-  margin-bottom: 12px;                        /* Paragraflar arası boşluk */
-  font-size: 15.5px;                          /* Yazı boyutu */
-}
-
-/* === ALTTA KUTU VE FOTO YAN YANA === */
-.about-bottom-row {
-  display: flex;                              /* Yanyana kutu ve görsel */
-  flex-direction: row-reverse;                /* Sıralamayı ters çevirir: Görsel sağda olur */
-  align-items: flex-start;                    /* Üstten hizalanır */
-  width: 100%;                               /* Tam genişlik */
-  background: #fafafa;                        /* Açık gri arka plan */
-
-  margin: 0;                                  /* Dış boşluk yok */
-  box-sizing: border-box;                     /* Padding/margin hesaba katılır */
-}
-
-.about-brand-box {
-  background: #f7ede2;                        /* Kutu arka plan rengi */
-  border-radius: 10px;                        /* Yumuşak köşe */
-  box-shadow: 0 8px 30px rgba(80, 80, 80, 0.18); /* Gölge */
-  max-width: 480px;                           /* Maksimum kutu genişliği */
-  min-width: 340px;                           /* Minimum kutu genişliği */
-  margin: 48px 48px 0 32px;                   /* Üst 48px, sağ 48px, sol 32px boşluk */
-  padding: 36px 32px 28px 32px;               /* İç boşluk */
-  font-family: 'Montserrat', Arial, sans-serif; /* Yazı tipi */
-  font-size: 19px;                            /* Yazı boyutu */
-  color: #191818;                             /* Yazı rengi */
-  position: relative;                         /* Konumlandırma */
-  z-index: 2;                                 /* Üstte kalsın */
-}
-
-.about-brand-box h2 {
-  margin-top: 0;                              /* Üstte boşluk yok */
-  font-size: 2.2rem;                          /* Başlık boyutu */
-  font-weight: bold;                          /* Kalın başlık */
-  margin-bottom: 6px;                         /* Alt boşluk */
-  color: #191818;                             /* Başlık rengi */
-}
-
-.brand-underline {
-  width: 180px;                               /* Çizgi uzunluğu */
-  height: 4px;                                /* Çizgi kalınlığı */
-  background: #7b4fff;                        /* Çizgi rengi */
-  border-radius: 2px;                         /* Yumuşak uçlu çizgi */
-  margin-bottom: 16px;                        /* Alt boşluk */
-}
-
-.about-brand-box p {
-  margin-bottom: 0.6em;                       /* Paragraflar arası boşluk */
-  line-height: 1.7;                           /* Satır arası boşluk */
-}
-
-.about-bottom-image {
-  width: 100%;                                /* Görsel alanı tam genişlik */
-  padding: 0;                                 /* İç boşluk yok */
-  background-color: #fafafa;                   /* Açık gri arka plan */
-  display: flex;                              /* İçeriği yatay hizalar */
-  justify-content: flex-end;                  /* Sağ tarafa yaslar */
-  align-items: flex-start;                    /* Üstten hizalar */
-  margin-left: 0;                             /* Sol boşluk yok */
-  margin-right: 0;                            /* Sağ boşluk yok */
-}
-
-.about-bottom-image img {
-  max-width: 1000px;                          /* Maksimum görsel genişliği */
-  width: 100%;                                /* Bulunduğu alan kadar genişlik */
-  border-radius: 0px;                         /* Köşeler düz */
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1); /* Hafif gölge */
-  object-fit: cover;                          /* Oran koruyarak alanı doldur */
-  margin: 0;                                  /* Dış boşluk yok */
-}
-
-.about-down-arrow {
-  position: absolute;                         /* Kesin konumlandırma */
-  left: 50%;                                  /* Yatayda ortalar */
-  bottom: 32px;                               /* Alttan 32px yukarıda */
-  transform: translateX(-50%);                /* Tam ortaya hizalama */
-  z-index: 30;                                /* Üstte kalsın */
-  cursor: pointer;                            /* Mouse üstüne gelince el simgesi */
-  transition: transform 0.2s;                 /* Animasyonlu geçiş */
-}
-
-.about-down-arrow:hover {
-  transform: translateX(-50%) translateY(6px) scale(1.07); /* Üzerine gelince ok büyür ve aşağı iner */
-  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.14));         /* Hafif gölge efekti */
-}
-
-.about-third-image {
-  width: 100%;                                /* Tam genişlik */
-  display: flex;                              /* Yatayda hizalar */
-  justify-content: flex-end;                  /* Görseli sağa yaslar */
-  align-items: center;                        /* Dikeyde ortalar */
-  background: #fafafa;                        /* Açık gri arka plan */
-  padding: 0;                                 /* İç boşluk yok */
-  margin: 0;                                  /* Dış boşluk yok */
-  box-sizing: border-box;                     /* Padding/margin hesaba katılır */
-}
-
-.about-third-image img {
-  width: 900px;                               /* Sabit görsel genişliği */
-  max-width: 100%;                            /* Ekrandan taşmasın */
-  object-fit: cover;                          /* Oran koruyarak alanı doldur */
-  box-shadow: 0 8px 36px rgba(60, 60, 60, 0.12); /* Hafif gölge */
-  margin: 0;                                  /* Dış boşluk yok */
-  display: block;                             /* Satır içi değil blok olarak göster */
-}
-.about-image-row {
-  width: 100vw;
-  min-height: 450px;
+/* === 1. BÖLÜM (HERO) === */
+.birincibolum {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  background: #fafafa;
-  overflow-x: hidden;
+  justify-content: flex-start;
 }
 
-.about-random-box {
-  background: #f7ede2f5;                      /* Açık krem arka plan */
-  box-shadow: 0 4px 32px 0 rgba(120,120,120,0.12); /* Hafif kutu gölgesi */
-  max-width: 470px;     
-    margin-left: 16px;                     /* Maksimum genişlik */
-  margin-right: 32px;                         /* Sağdan boşluk */
-  padding: 30px 34px 26px 28px;               /* İç boşluk */
-  font-family: 'Montserrat', Arial, sans-serif; /* Yazı tipi */
-  font-size: 20px;                            /* Yazı boyutu */
-  color: #191818;                             /* Yazı rengi */
-  z-index: 2;                                 /* Diğerlerinin üstünde */
+.birincikisım {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 }
-.about-random-box h3 {
-  margin: 0 0 12px 0;                         /* Başlığın altı 12px boşluk */
-  font-size: 1.3rem;                          /* Başlık boyutu */
-  font-weight: 600;                           /* Kalın başlık */
+
+.birincibolumyazi {
+    background: #dad9d4;
+  padding: 30px 40px;
+  max-width: 500px;        
+  box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+  color: #1e1e1e;
+  font-family: "Times New Roman", Times, serif;
+  line-height: 1.7;
+  margin-left: auto;
+  margin-right: 48px;
+  margin-top: 250px;          
+  text-align: center;
 }
 
 
-.about-random-img {
-  width: 800px;        /* Sabit genişlik */
-  max-width: 55vw;     /* Ekranın en fazla %55'i kadar yer kaplar */
-  object-fit: cover;   /* Oran koruyarak kutuyu kapla */
-  box-shadow: 0 8px 36px rgba(60, 60, 60, 0.12); /* Hafif gölge */
-  margin: 0;
-  display: block;
+/* === 1. BÖLÜM (HERO) === */
+.birincibolum {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0;        
+}
+
+/* === 2. BÖLÜM === */
+.ikincibolum {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  padding: 80px 40px;
+  display: flex;
+  align-items: flex-start;   
+  justify-content: flex-start;
+}
+
+/* === 3. BÖLÜM === */
+.ucuncubolum {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  padding: 80px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* === 4. BÖLÜM === */
+.dorduncubolum {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  padding: 80px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* === 2. Bölüm Yazı Kutusu === */
+.ikincibolumyazi {
+    background: #dad9d4;
+  padding: 30px 40px;
+  max-width: 500px;           
+  box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+  color: #1e1e1e;
+  font-family: "Times New Roman", Times, serif;
+  line-height: 1.7;
+  margin-left: auto;
+  margin-right: 48px;
+  margin-top: 250px;           
+  text-align: center;
+}
+
+/* === 3. Bölüm Yazı Kutusu === */
+.ucuncubolumyazi {
+    background: #dad9d4;
+  padding: 30px 40px;
+  max-width: 500px;         
+  box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+  color: #1e1e1e;
+  font-family: "Times New Roman", Times, serif;
+  line-height: 1.7;
+  margin-left: auto;
+  margin-right: 48px;
+  margin-top: 350px;          
+  text-align: center;
+}
+
+/* === 4. Bölüm Yazı Kutusu === */
+.dorduncubolumyazi {
+    background: #dad9d4;
+  padding: 30px 40px;
+  max-width: 500px;           
+  box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+  color: #1e1e1e;
+  font-family: "Times New Roman", Times, serif;
+  line-height: 1.7;
+  margin-left: auto;
+  margin-right: 48px;
+  margin-top: 250px;     
+  text-align: center;
+}
+
+
+/* === AŞAĞI OKU === */
+.ok {
+  position: absolute;
+  left: 50%;
+  bottom: 32px;
+  transform: translateX(-50%);
+  z-index: 10;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.ok:hover {
+  transform: translateX(-50%) translateY(6px) scale(1.07);
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.14));
+}
+
+/* === SADECE ABOUT'TA HEADER'I ŞEFFAF YAP === */
+.birincibolum ~ .header,
+body[data-about="true"] .header {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+/* Header yazıları beyaz ve gölgeli */
+.header .logo-text,
+.header .logo-tagline,
+.header .nav-link {
+  color: #fcfcfc !important;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.12) !important;
+}
+
+/* === SCROLL'DA ÜST BOŞLUK === */
+#hakkimizda {
+  scroll-margin-top: 100px;
+}
+
+.ikincibolumyazi hr,
+.ucuncubolumyazi hr,
+.dorduncubolumyazi hr,
+.birincibolumyazi hr {
+  border: none;
+  height: 2px;
+  background-color: #1e1e1e;
+  width: 50px;
+  margin: 12px 0 20px;
+}
+.ikincibolumyazi p,
+.ucuncubolumyazi p,
+.dorduncubolumyazi p,
+.birincibolumyazi p {
+  margin-bottom: 12px;
+  font-size: 15.5px;
 }
