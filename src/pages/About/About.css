@@ -1,3 +1,4 @@
+
 .about-overlay-section {
   position: relative;                    /* İçindeki elemanlara konumlandırma sağlar */
   background-size: cover;                /* Arka planı tam kaplar */
@@ -179,3 +180,193 @@
   margin: 0;
   display: block;
 }
+=======
+/* === 1. BÖLÜM (HERO) === */
+.birincibolum {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.birincikisım {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.birincibolumyazi {
+    background: #dad9d4;
+  padding: 30px 40px;
+  max-width: 500px;        
+  box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+  color: #1e1e1e;
+  font-family: "Times New Roman", Times, serif;
+  line-height: 1.7;
+  margin-left: auto;
+  margin-right: 48px;
+  margin-top: 250px;          
+  text-align: center;
+}
+
+
+/* === 1. BÖLÜM (HERO) === */
+.birincibolum {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0;        
+}
+
+/* === 2. BÖLÜM === */
+.ikincibolum {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  padding: 80px 40px;
+  display: flex;
+  align-items: flex-start;   
+  justify-content: flex-start;
+}
+
+/* === 3. BÖLÜM === */
+.ucuncubolum {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  padding: 80px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* === 4. BÖLÜM === */
+.dorduncubolum {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  padding: 80px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* === 2. Bölüm Yazı Kutusu === */
+.ikincibolumyazi {
+    background: #dad9d4;
+  padding: 30px 40px;
+  max-width: 500px;           
+  box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+  color: #1e1e1e;
+  font-family: "Times New Roman", Times, serif;
+  line-height: 1.7;
+  margin-left: auto;
+  margin-right: 48px;
+  margin-top: 250px;           
+  text-align: center;
+}
+
+/* === 3. Bölüm Yazı Kutusu === */
+.ucuncubolumyazi {
+    background: #dad9d4;
+  padding: 30px 40px;
+  max-width: 500px;         
+  box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+  color: #1e1e1e;
+  font-family: "Times New Roman", Times, serif;
+  line-height: 1.7;
+  margin-left: auto;
+  margin-right: 48px;
+  margin-top: 350px;          
+  text-align: center;
+}
+
+/* === 4. Bölüm Yazı Kutusu === */
+.dorduncubolumyazi {
+    background: #dad9d4;
+  padding: 30px 40px;
+  max-width: 500px;           
+  box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+  color: #1e1e1e;
+  font-family: "Times New Roman", Times, serif;
+  line-height: 1.7;
+  margin-left: auto;
+  margin-right: 48px;
+  margin-top: 250px;     
+  text-align: center;
+}
+
+
+/* === AŞAĞI OKU === */
+.ok {
+  position: absolute;
+  left: 50%;
+  bottom: 32px;
+  transform: translateX(-50%);
+  z-index: 10;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.ok:hover {
+  transform: translateX(-50%) translateY(6px) scale(1.07);
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.14));
+}
+
+/* === SADECE ABOUT'TA HEADER'I ŞEFFAF YAP === */
+.birincibolum ~ .header,
+body[data-about="true"] .header {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+/* Header yazıları beyaz ve gölgeli */
+.header .logo-text,
+.header .logo-tagline,
+.header .nav-link {
+  color: #fcfcfc !important;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.12) !important;
+}
+
+/* === SCROLL'DA ÜST BOŞLUK === */
+#hakkimizda {
+  scroll-margin-top: 100px;
+}
+
+.ikincibolumyazi hr,
+.ucuncubolumyazi hr,
+.dorduncubolumyazi hr,
+.birincibolumyazi hr {
+  border: none;
+  height: 2px;
+  background-color: #1e1e1e;
+  width: 50px;
+  margin: 12px 0 20px;
+}
+.ikincibolumyazi p,
+.ucuncubolumyazi p,
+.dorduncubolumyazi p,
+.birincibolumyazi p {
+  margin-bottom: 12px;
+  font-size: 15.5px;
+}
+
