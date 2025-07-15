@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+
 body {
   font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
   background-color: #DAD9D4;
@@ -30,7 +35,6 @@ body {
   z-index: 2;
 }
 
-
 .scroll-down-container {
   position: absolute;
   bottom: 20px;
@@ -53,8 +57,6 @@ body {
   align-items: center;
   justify-content: center;
   margin-bottom: 5px;
-  transition: all 0.3s ease;
-  animation: bounce 2s infinite;
 }
 
 .scroll-down-arrow svg {
@@ -63,11 +65,11 @@ body {
 }
 
 .scroll-down-container:hover .scroll-down-arrow {
-  border-color: #fff;
+  border-color: #FCFCFC;
 }
 
 .scroll-down-container:hover .scroll-down-arrow svg {
-  color: #fff;
+  color: #FCFCFC;
 }
 
 @keyframes bounce {
@@ -113,40 +115,38 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+
 .koleksiyon-header h1 {
   font-size: clamp(7rem, 7vw, 5rem); 
-  font-weight: 600;
-  color: #ffffff;
+  font-weight: 700;
+  color: #FCFCFC;
   margin-bottom: 24px;
-  font-family: 'Outfit', 'Poppins', sans-serif;
+  font-family: 'Playfair Display', 'Montserrat', serif;
   letter-spacing: 0.5px;
   line-height: 1.2;
   text-align: center;
   text-transform: uppercase;
 }
+
 .koleksiyon-header p {
   font-size: clamp(1rem, 3vw, 1rem); 
-  font-weight: 200;
-  color: #ffffff;
+  font-weight: 300;
+  color: #FCFCFC;
   margin-bottom: 24px;
-  font-family: 'Outfit', 'Poppins', sans-serif;
-  
- 
+  font-family: 'Poppins', 'Inter', sans-serif;
   text-align: center;
   text-transform: uppercase;
+  letter-spacing: 1px;
 }
-.kategori-description {
-  color: #e0e0e0;
-  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
-  font-family: 'Outfit', 'Poppins', sans-serif;
-  font-weight: 400;
 
+.kategori-description {
+  color: #E0E0E0;
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  font-family: 'Poppins', 'Inter', sans-serif;
+  font-weight: 400;
   line-height: 1.6;
- 
   max-width: 500px;
 }
-
-
 
 .koleksiyon-grid {
   display: flex;
@@ -162,7 +162,7 @@ body {
   gap: 60px;
   background: transparent;
   padding: 40px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(252, 252, 252, 0.1);
   transition: all 0.4s ease;
 }
 
@@ -173,7 +173,6 @@ body {
 .koleksiyon-item:last-child {
   border-bottom: none;
 }
-
 
 .item-content-left {
   flex: 1;
@@ -186,9 +185,9 @@ body {
 .kategori-baslik-left {
   font-size: 5rem;
   font-weight: 700;
-  color: #fffcfc;
+  color: #FCFCFC;
   margin: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Montserrat', 'Playfair Display', sans-serif;
   letter-spacing: -1px;
   line-height: 1.2;
   text-transform: uppercase;
@@ -209,7 +208,7 @@ body {
   letter-spacing: 1.5px;
   position: relative;
   overflow: hidden;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter', 'Poppins', sans-serif;
   cursor: pointer;
   width: fit-content;
 }
@@ -227,14 +226,13 @@ body {
 }
 
 .item-link-left:hover {
-  color: #090909;
+  color: #232323;
   border-color: #FCFCFC;
 }
 
 .item-link-left:hover::before {
   left: 0;
 }
-
 
 .item-image-container-right {
   flex: 1;
@@ -253,10 +251,6 @@ body {
   filter: brightness(0.9) saturate(0.95);
 }
 
-.koleksiyon-item:hover .item-image-right {
-  transform: scale(1.05);
-  filter: brightness(1) saturate(1);
-}
 
 
 @media (max-width: 1024px) {
@@ -339,4 +333,4 @@ body {
   .item-image-container-right {
     height: 250px;
   }
-}
+} 

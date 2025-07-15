@@ -1,0 +1,166 @@
+
+.modern-gallery {
+  min-height: 100vh;
+  background: #898989;
+  color: #fff;
+  width: 100%;
+}
+
+.content-container {
+  width: 100%;
+}
+
+.content-section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+}
+
+.image-container {
+  width: 60%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.section-image:hover {
+  transform: scale(1.05);
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.image-container:hover .image-overlay {
+  opacity: 1;
+}
+
+.content-panel {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 40px;
+  background: linear-gradient(
+    135deg,
+    rgba(15, 15, 15, 0.95) 0%,
+    rgba(25, 25, 25, 0.98) 100%
+  );
+  backdrop-filter: blur(20px);
+  border-left: 1px solid rgba(212, 175, 55, 0.2);
+  position: relative;
+}
+
+.content-panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    #d4af37 50%,
+    transparent 100%
+  );
+}
+
+.section-title {
+  font-size: clamp(2.2rem, 3vw, 2.5rem);
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #ffffff;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #d4af37, #f4e869);
+  border-radius: 2px;
+}
+
+.section-text {
+  font-size: clamp(1.5rem, 1.5vw, 1.1rem);
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 40px;
+  font-weight: 300;
+}
+
+.section-number {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+}
+
+.content-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* İkinci sırada resmi sağa almak için */
+.content-section.reverse {
+  flex-direction: row-reverse;
+}
+
+.content-section.reverse .content-panel {
+  border-left: none;
+  border-right: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.content-section.reverse .content-panel::before {
+  left: auto;
+  right: 0;
+}

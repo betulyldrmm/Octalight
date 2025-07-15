@@ -10,7 +10,7 @@ const Header = () => {
   const location = useLocation();
 
   // Transparan olması gereken sayfalar
-  const transparentRoutes = ['/', '/koleksiyon', '/golden', '/nest'];
+  const transparentRoutes = ['/', '/koleksiyon', '/golden', '/nest','/about',"/home","/tasarimcilar","/pearls","/ronmite"];
   const isTransparentPage = transparentRoutes.includes(location.pathname);
 
   useEffect(() => {
@@ -41,14 +41,7 @@ const Header = () => {
     <header className={`header ${isTransparentPage ? 'header-transparent' : ''} ${!isVisible ? 'header-hidden' : ''}`}>
       <div className="container">
         <div className="logo">
-           <svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
-      <path d="M60,150 A90,90 0 0 1 150,60" stroke="white" stroke-width="2" fill="none" />
-      <path d="M150,240 A90,90 0 0 1 240,150" stroke="white" stroke-width="2" fill="none" />
-      <circle cx="260" cy="40" r="4" fill="white" />
-   
-      <line x1="95" y1="170" x2="205" y2="170" stroke="white" stroke-width="2" />
-     
-    </svg>
+           
 
           <div className="logo-text-container">
             <span className="logo-text">OCTALIGHT</span>
@@ -58,11 +51,12 @@ const Header = () => {
 
         <nav className="nav">
           <ul className="nav-menu">
-            <li><a href="#" className="nav-link">HAKKIMIZDA</a></li>
+            <li><a href='/home' className='nav-link'>ANASAYFA</a></li>
+            <li><a href="/about" className="nav-link">HAKKIMIZDA</a></li>
             <li><a href="/koleksiyon" className="nav-link">KOLEKSİYON</a></li>
-            <li><a href="#" className="nav-link">TASARIMCILAR</a></li>
-            <li><a href="#" className="nav-link">HABERLER</a></li>
-            <li><a href="#" className="nav-link">MAĞAZALAR</a></li>
+            <li><a href="/tasarimcilar" className="nav-link">TASARIMCILAR</a></li>
+            <li><a href="#" className="nav-link">VİZYON-MİSYON</a></li>
+            <li><a href="#" className="nav-link">İLETİŞİM</a></li>
           </ul>
         </nav>
 

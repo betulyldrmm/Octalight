@@ -101,7 +101,6 @@ const Koleksiyon = () => {
         <br></br><br></br>
       </div>
 
-      <Footer />
     </>
   );
 };

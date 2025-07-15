@@ -3,198 +3,127 @@ import { Link } from 'react-router-dom';
 import './Golden.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-
 import { FaHome, FaList, FaGem } from 'react-icons/fa';
+
 import Header from '../../components/Header';
-import Footer from '../../components/Footer';
 import ScrollToTop from '../../components/ScrollToTop';
 
-import foto1 from '../../assets/isi.jpg';
-import foto2 from '../../assets/iaik2.jpg';
-import foto3 from '../../assets/isik3.jpg';
-import isikii from '../../assets/isiki.jpg';
-import isik1 from '../../assets/isik1.jpg';
-import isik2 from '../../assets/isik2.jpg';
-import isik3 from '../../assets/isik3.jpg';
+import heroImage from '../../assets/hero.jpg';
+import img1 from '../../assets/isik1.jpg';
+import img2 from '../../assets/isik2.jpg';
+import img3 from '../../assets/isik3.jpg';
+
+import Donme from '../../components/Donme';
+
+import Galeri from '../../components/Galeri';
+import ResimKismi from '../../components/ResimKismi';
 
 const Golden = () => {
-  const [currentSliderIndex, setCurrentSliderIndex] = useState(0);
+  const [loading, setLoading] = useState(true);
 
- 
-  const sliderImages = [isikii, isik1, isik2, isik3, isik1, isik2];
+  const contentData = [
+    {
+      image: img1,
+      text: 'The Golden Hour collection brings the magic of the day\'s most enchanting moments into your living spaces, blending the elegance of warm golden tones with modern design. This line recreates the magic of natural light, creating a timeless atmosphere in your interiors while offering the perfect balance of luxury and comfort.',
+      title: 'The Meeting of Elegance and Light',
+    },
+    {
+      image: img2,
+      text: 'Behind the minimalist forms lies sophisticated technology, transforming each piece into not only a lighting element but also an artistic expression. This collection reflects the pursuit of perfection in every detail and is designed with an understanding of the dynamics of modern life.',
+      title: 'Harmony of Technology and Art',
+    },
+    {
+      image: img3,
+      text: 'Blending the warmth of gold with the functionality of modern life, this collection promises much more than ordinary lighting. Each piece creates timeless value, transforming your living spaces into works of art.',
+      title: 'Timeless Value and Design',
+    },
+  ];
 
-  
   useEffect(() => {
     AOS.init({
       duration: 1000,
-      easing: 'ease-in-out',
       once: true,
+      offset: 100,
+      easing: 'ease-in-out',
     });
+
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 500);
+
+    return () => clearTimeout(timer);
   }, []);
 
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSliderIndex((prevIndex) => {
-        const nextIndex = prevIndex === sliderImages.length - 1 ? 0 : prevIndex + 1;
-        return nextIndex;
-      });
-    }, 5000); 
-
-    return () => clearInterval(interval);
-  }, [sliderImages.length]);
-
-  const goToSlide = (index) => {
-    if (index >= 0 && index < sliderImages.length) {
-      setCurrentSliderIndex(index);
-    }
-  };
-
-  const heroImage = foto1;
-
-  const slideWidth = 320; 
-  const gap = 25;
-  const slideCount = sliderImages.length;
-  const trackWidth = (slideWidth + gap) * slideCount;
+  if (loading) {
+    return (
+      <div className="loader">
+        <div className="loader-spinner"></div>
+        <p>Loading...</p>
+      </div>
+    );
+  }
 
   return (
     <>
       <Header />
       <ScrollToTop />
 
-      <div className="breadcrumb">
-        <Link to="/" className="breadcrumb-link">
-          <FaHome className="breadcrumb-icon" />
-          <span>Anasayfa</span>
-        </Link>
-        <Link to="/koleksiyon" className="breadcrumb-link">
-          <FaList className="breadcrumb-icon" />
-          <span>Koleksiyon</span>
-        </Link>
-        <div className="breadcrumb-link active">
-          <FaGem className="breadcrumb-icon" />
-          <span>Golden Hour</span>
+      <div className="page-container">
+        {/* Sidebar */}
+        <div className="sidebarr">
+          <Link to="/" className="sidebarr-link">
+            <FaHome className="sidebarr-icon" />
+            <span className="sidebarr-text">Home</span>
+          </Link>
+          <Link to="/koleksiyon" className="sidebarr-link">
+            <FaList className="sidebarr-icon" />
+            <span className="sidebarr-text">Collection</span>
+          </Link>
+          <div className="sidebarr-link active">
+            <FaGem className="sidebarr-icon" />
+            <span className="sidebarr-text">GOLDEN HOUR</span>
+          </div>
         </div>
-      </div>
 
-      <div className="sandalyeler-page">
+        {/* Hero Section */}
         <div className="hero-section">
           <div className="hero-image-container">
             <img
               src={heroImage}
               alt="Golden Hour Hero"
               className="hero-image"
+              loading="lazy"
             />
             <div className="hero-overlay">
-              <div className="hero-content">
+              <div className="hero-content" data-aos="fade-up">
                 <h1 className="hero-title">GOLDEN HOUR</h1>
-                <p className="hero-description">Modern ve şık tasarımıyla</p>
+                <p className="hero-subtitle">
+                  Modern and elegant lighting for your dreams
+                </p>
               </div>
             </div>
           </div>
         </div>
 
-        
+        <br /><br /><br />
+        <Donme />
+
+        {/* Collection Story */}
         <div className="collection-story">
           <div className="story-content">
-            <h3 className="story-title" data-aos="fade-up">
-              GOLDEN HOUR
-            </h3>
+            <h2 className="story-title" data-aos="fade-up">
+              GOLDEN HOUR COLLECTION
+            </h2>
+            <p className="story-subtitle" data-aos="fade-up" data-aos-delay="200">
+              The perfect harmony of light and design
+            </p>
           </div>
 
-     
-          <div className="slider-section" data-aos="fade-up" data-aos-delay="100">
-            <div className="slider-main-container">
-              <div className="main-slider">
-                <div className="slider-wrapper">
-                  <div
-                    className="slider-track"
-                    style={{
-                      width: `${trackWidth}px`,
-                      transform: `translateX(-${currentSliderIndex * (slideWidth + gap)}px)`,
-                    }}
-                  >
-                    {sliderImages.map((image, index) => (
-                      <div
-                        key={index}
-                        className="slider-slide"
-                        style={{ width: `${slideWidth}px` }}
-                      >
-                        <img
-                          src={image}
-                          alt={`Golden Hour ${index + 1}`}
-                          className="slider-image"
-                        />
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-        
-                <div className="slider-dots">
-                  {sliderImages.map((_, index) => (
-                    <button
-                      key={index}
-                      className={`dot ${index === currentSliderIndex ? 'active' : ''}`}
-                      onClick={() => goToSlide(index)}
-                      aria-label={`Slide ${index + 1}`}
-                    />
-                  ))}
-                </div>
-              </div>
-
-             
-              <div className="slider-description">
-                <p className="description-text">
-                  Günün en büyülü anlarını yaşam alanlarınıza taşıyan Golden Hour koleksiyonu, sıcak altın tonlarının zarafetini modern tasarımla buluşturuyor
-                </p>
-                <div className="description-features"></div>
-                <div className="description-stats"></div>
-              </div>
-            </div>
-          </div>
-
-          <div className="story-container">
+       <ResimKismi></ResimKismi>     
        
-            <div className="content-box" data-aos="fade-up" data-aos-delay="200">
-              <div className="image-section">
-                <img src={foto1} alt="Golden Hour Koleksiyonu" className="content-image" />
-              </div>
-              <div className="text-section">
-                <p className="content-text">
-                  Günün en büyülü anlarını yaşam alanlarınıza taşıyan Golden Hour koleksiyonu, sıcak altın tonlarının zarafetini modern tasarımla buluşturuyor. Doğal ışığın büyüsünü yeniden yaratan bu çizgi, mekanlarınızda zamansız bir atmosfer yaratırken, lüks ve konforun mükemmel dengesini sunar.
-                </p>
-              </div>
-            </div>
-
-       
-            <div className="content-box" data-aos="fade-up" data-aos-delay="400">
-              <div className="image-section">
-                <img src={foto2} alt="Golden Hour Tasarım" className="content-image" />
-              </div>
-              <div className="text-section">
-                <p className="content-text">
-                  Minimalist formların arkasında yatan sofistike teknoloji, her bir parçayı sadece bir aydınlatma elementi değil, aynı zamanda sanatsal bir ifade aracı haline getiriyor. Her detayında mükemmellik arayışının izlerini taşıyan bu koleksiyon, modern yaşamın dinamiklerini anlayarak tasarlanmıştır.
-                </p>
-              </div>
-            </div>
-
-       
-            <div className="content-box" data-aos="fade-up" data-aos-delay="600">
-              <div className="image-section">
-                <img src={foto3} alt="Golden Hour Detay" className="content-image" />
-              </div>
-              <div className="text-section">
-                <p className="content-text">
-                  Altın rengin sıcaklığı ile modern yaşamın işlevselliğini harmanlayan bu koleksiyon, mekanlarınızı sıradan aydınlatmaktan çok daha fazlasını vaat ediyor. Her bir parça, zamanın ötesinde bir değer yaratarak, yaşam alanlarınızı sanat eserine dönüştürüyor.
-                </p>
-              </div>
-            </div>
           </div>
         </div>
-      </div>
-
-      <Footer />
+  
     </>
   );
 };

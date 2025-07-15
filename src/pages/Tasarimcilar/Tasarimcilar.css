@@ -1,0 +1,122 @@
+:root {
+  --bg: #f4f4f4;
+  --white: #ffffff;
+  --gray: #888;
+  --dark: #222;
+  --accent: #d4af37;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg);
+}
+
+.designer-section {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.designer-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.designer-header h1 {
+  font-size: 3rem;
+  color: var(--dark);
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.designer-header p {
+  font-size: 1.3rem;
+  color: var(--gray);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.designer-card {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  background-color: var(--white);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px var(--shadow);
+  padding: 40px;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.designer-card:hover {
+  transform: translateY(-5px);
+}
+
+.designer-image-wrapper {
+  flex: 0 0 300px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.designer-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.designer-info {
+  flex: 1;
+}
+
+.designer-name {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: var(--accent);
+}
+
+.designer-bio {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--gray);
+  text-align: justify;
+  margin-bottom: 30px;
+}
+
+.designer-button {
+  background-color: var(--accent);
+  border: none;
+  padding: 12px 28px;
+  border-radius: 8px;
+  color: var(--white);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+}
+
+.designer-button:hover {
+  background-color: #b99426;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .designer-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .designer-image-wrapper {
+    width: 100%;
+  }
+
+  .designer-bio {
+    text-align: center;
+  }
+}

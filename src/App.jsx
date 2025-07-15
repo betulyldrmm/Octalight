@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import Home from './components/Home';
+import Home from './pages/Home';
 import Koleksiyon from './pages/Koleksiyon/Koleksiyon';
 import Golden from './pages/Golden/Golden';
 import Nest from './pages/Nest/Nest';
@@ -12,12 +12,14 @@ import Footer from './components/Footer';
 import DonmeDolapKarti from './components/DonmeDolapKarti';
 import CookieBanner from './components/CookieBanner';
 import Header from './components/Header';
-import About from './components/About';
+import About from './pages/About/About';
+import Donme from './components/Donme';
 
 import ScrollToTop from './components/ScrollToTop';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Tasarimcilar from './pages/Tasarimcilar/Tasarimcilar';
 
 const App = () => {
   useEffect(() => {
@@ -75,15 +77,19 @@ const App = () => {
             />
 
             {/* Koleksiyon ve Diğer Sayfalar */}
-            <Route path="/koleksiyon" element={<Koleksiyon />} />
-            <Route path="/golden" element={<Golden />} />
-            <Route path="/nest" element={<Nest />} />
-            <Route path="/pearls" element={<Pearls />} />
-            <Route path="/ronmite" element={<Ronmite />} />
+           
 
             {/* Hakkımızda */}
-            <Route path="/hakkimizda" element={<About />} />
-           
+        <Route path="/hakkimizda" element={<About />} />
+         <Route path="/" element={<Home />} />
+        <Route path="home" element={<Home />} />
+        <Route path="/koleksiyon" element={<Koleksiyon />} />
+        <Route path="/golden" element={<Golden />} />
+       <Route path="/nest" element={<Nest />} />
+        <Route path="/pearls" element={<Pearls />} />
+        <Route path="/ronmite" element={<Ronmite />} />
+        <Route path="/about" element={<About/>}/>
+ <Route path='/tasarimcilar' element={<Tasarimcilar/>}/>
           </Routes>
         </main>
 

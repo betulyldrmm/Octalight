@@ -6,176 +6,122 @@ import 'aos/dist/aos.css';
 import { FaHome, FaList, FaGem } from 'react-icons/fa';
 
 import Header from '../../components/Header';
-import Footer from '../../components/Footer';
 import ScrollToTop from '../../components/ScrollToTop';
-import ekskai from '../../assets/nestt.jpg';
-import ekskai2 from '../../assets/lamba3.png';
-import foto1 from '../../assets/nest.jpg';
-import foto2 from '../../assets/nest2.jpg';
-import foto3 from '../../assets/nest3.jpg';
 
-const Golden = () => {
-  const [currentSliderIndex, setCurrentSliderIndex] = useState(0);
-  
-  const heroImage = ekskai;
-  
-  const sliderImages = [
-    ekskai,
-    ekskai2,
-    ekskai,
-    ekskai2
+import heroImage from '../../assets/hero.jpg';
+import img1 from '../../assets/isik1.jpg';
+import img2 from '../../assets/isik2.jpg';
+import img3 from '../../assets/isik3.jpg';
+
+import Donme from '../../components/Donme';
+
+import ResimKismi from '../../components/ResimKismi';
+
+const Nest = () => {
+  const [loading, setLoading] = useState(true);
+
+  const contentData = [
+    {
+      image: img1,
+      text:
+        'Inspired by nature’s organic forms, the Nest collection brings warmth and tranquility to your living spaces with soft lines and gentle light.',
+      title: 'The Meeting of Elegance and Light',
+    },
+    {
+      image: img2,
+      text:
+        'The comfort of rounded forms merges with contemporary technology, creating designs that connect emotionally as well as visually.',
+      title: 'Harmony of Technology and Art',
+    },
+    {
+      image: img3,
+      text:
+        'Nest does not only light your space, it makes it livable.',
+      title: 'Timeless Value and Design',
+    },
   ];
-  
-  const prevSliderImage = () => {
-    setCurrentSliderIndex((prevIndex) => 
-      prevIndex === 0 ? sliderImages.length - 1 : prevIndex - 1
-    );
-  };
-  
-  const nextSliderImage = () => {
-    setCurrentSliderIndex((prevIndex) => 
-      prevIndex === sliderImages.length - 1 ? 0 : prevIndex + 1
-    );
-  };
-  
-  useEffect(() => {
-    const handleKeyPress = (e) => {
-      if (e.key === 'ArrowLeft') prevSliderImage();
-      if (e.key === 'ArrowRight') nextSliderImage();
-    };
-    
-    window.addEventListener('keydown', handleKeyPress);
-    return () => window.removeEventListener('keydown', handleKeyPress);
-  }, []);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      nextSliderImage();
-    }, 5000);
-    
-    return () => clearInterval(interval);
-  }, []);
 
   useEffect(() => {
     AOS.init({
       duration: 1000,
       once: true,
-      offset: 100
+      offset: 100,
+      easing: 'ease-in-out',
     });
+
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 500);
+
+    return () => clearTimeout(timer);
   }, []);
 
-  const handleShare = () => {
-    if (navigator.share) {
-      navigator.share({
-        title: 'Golden Hour - Lamba Koleksiyonu',
-        text: 'Modern ve şık tasarımıyla Golden Hour koleksiyonu',
-        url: window.location.href
-      });
-    } else {
-      navigator.clipboard.writeText(window.location.href);
-      alert('Link kopyalandı!');
-    }
-  };
+  if (loading) {
+    return (
+      <div className="loader">
+        <div className="loader-spinner"></div>
+        <p>Loading...</p>
+      </div>
+    );
+  }
 
   return (
     <>
       <Header />
       <ScrollToTop />
-        <div className="sidebar-nav">
-        <Link to="/" className="sidebar-item">
-          <FaHome className="sidebar-icon" />
-          <span className="sidebar-text">Anasayfa</span>
-        </Link>
-        <Link to="/koleksiyon" className="sidebar-item">
-          <FaList className="sidebar-icon" />
-          <span className="sidebar-text">Koleksiyon</span>
-        </Link>
-        <div className="sidebar-item active">
-          <FaGem className="sidebar-icon" />
-          <span className="sidebar-text">NEST</span>
-        </div>
-      </div>
-      <div className="sandalyeler-page">
-        <div className="breadcrumb">
-          
-         
-         
-      
+
+      <div className="page-container">
+        <div className="sidebar">
+          <Link to="/" className="sidebar-link">
+            <FaHome />
+            <span>Home</span>
+          </Link>
+          <Link to="/koleksiyon" className="sidebar-link">
+            <FaList />
+            <span>Collection</span>
+          </Link>
+          <div className="sidebar-link active">
+            <FaGem />
+            <span>NEST</span>
+          </div>
         </div>
 
         <div className="hero-section">
           <div className="hero-image-container">
-            <img 
-              src={heroImage} 
-              alt="Golden Hour Hero"
+            <img
+              src={heroImage}
+              alt="Hero"
               className="hero-image"
+              loading="lazy"
             />
             <div className="hero-overlay">
-              <div className="hero-content">
+              <div className="hero-content" data-aos="fade-up">
                 <h1 className="hero-title">NEST</h1>
-                <p className="hero-description">
-                  Modern ve şık tasarımıyla
-                </p>
+                <p className="hero-subtitle">Modern lighting beyond expectations</p>
               </div>
             </div>
           </div>
         </div>
+<br></br><br></br><br></br>
+        <Donme />
 
         <div className="collection-story">
           <div className="story-content">
-            <h3 className="story-title" data-aos="fade-up">GOLDEN HOUR</h3>
+            <h2 className="story-title" data-aos="fade-up">
+              NEST COLLECTION
+            </h2>
+            <p className="story-subtitle" data-aos="fade-up" data-aos-delay="200">
+              Perfect harmony of light and design
+            </p>
           </div>
-          
-          <div className="story-images-new">
-           
-            <div className="image-text-section" data-aos="fade-up" data-aos-delay="200">
-              <div className="image-container">
-                <img src={foto1} alt="Golden Hour Koleksiyonu" className="story-image-new" />
-              </div>
-              <div className="text-content">
-                <p className="story-text-new">
-                  Günün en büyülü anlarını yaşam alanlarınıza taşıyan Golden Hour koleksiyonu, 
-                  sıcak altın tonlarının zarafetini modern tasarımla buluşturuyor. Doğal ışığın 
-                  büyüsünü yeniden yaratan bu çizgi, mekanlarınızda zamansız bir atmosfer yaratırken, 
-                  lüks ve konforun mükemmel dengesini sunar.
-                </p>
-              </div>
-            </div>
-
-            <div className="image-text-section reverse" data-aos="fade-up" data-aos-delay="400">
-              <div className="image-container">
-                <img src={foto2} alt="Golden Hour Tasarım" className="story-image-new" />
-              </div>
-              <div className="text-content">
-                <p className="story-text-new">
-                  Minimalist formların arkasında yatan sofistike teknoloji, her bir parçayı sadece 
-                  bir aydınlatma elementi değil, aynı zamanda sanatsal bir ifade aracı haline getiriyor. 
-                  Her detayında mükemmellik arayışının izlerini taşıyan bu koleksiyon, modern yaşamın 
-                  dinamiklerini anlayarak tasarlanmıştır.
-                </p>
-              </div>
-            </div>
 
          
-            <div className="image-text-section" data-aos="fade-up" data-aos-delay="600">
-              <div className="image-container">
-                <img src={foto3} alt="Golden Hour Detay" className="story-image-new" />
-              </div>
-              <div className="text-content">
-                <p className="story-text-new">
-                  Altın rengin sıcaklığı ile modern yaşamın işlevselliğini harmanlayan bu koleksiyon, 
-                  mekanlarınızı sıradan aydınlatmaktan çok daha fazlasını vaat ediyor. Her bir parça, 
-                  zamanın ötesinde bir değer yaratarak, yaşam alanlarınızı sanat eserine dönüştürüyor.
-                </p>
-              </div>
-            </div>
+
           </div>
         </div>
-      </div>
-      
-      <Footer />
+      <ResimKismi></ResimKismi>
     </>
   );
 };
 
-export default Golden;
+export default Nest;
