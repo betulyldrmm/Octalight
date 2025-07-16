@@ -1,53 +1,49 @@
-import React from 'react';
 import './Footer.css';
-import { FaInstagram, FaFacebookF, FaLinkedinIn } from 'react-icons/fa';
+import React from "react";
+import { FaInstagram, FaFacebook, FaLinkedin } from "react-icons/fa";
 import ndmsoftwarelogo from '../assets/ndmsoftwarelogo.jpg';
 
-const Footer = () => {
-  return (
-    <footer className="footer">
-      <div className="footer-top">
-        {/* Bülten */}
-        <div className="newsletter">
-          <h4>BÜLTENİMİZE ABONE OLUN</h4>
-          <form className="newsletter-form">
-            <input type="email" placeholder="E-posta adresiniz" />
-            <button type="submit">ABONE OL</button>
-          </form>
-        </div>
-
-        {/* Sosyal + Mail */}
-        <div className="social-contact">
-          <h4 className="follow-title">BİZİ TAKİP EDİN</h4>
-          <div className="social-icons">
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-              <FaInstagram />
-            </a>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-              <FaFacebookF />
-            </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-              <FaLinkedinIn />
-            </a>
-          </div>
-          <div className="email">info@octalight.com.tr</div>
-        </div>
+const Footer = () => (
+  <footer>
+    <div className="footer">
+      <div className="footer-left">
+        <div className="footer-logo">OCTALIGHT</div>
+        <div className="newsletter-title">BÜLTENİMİZE ABONE OLUN</div>
+        <form className="newsletter-form" onSubmit={e => e.preventDefault()}>
+          <input type="email" placeholder="E-posta Adresi" required />
+          <button type="submit">ABONE OL</button>
+        </form>
       </div>
-
-      {/* Alt Bilgi */}
-      <div className="footer-bottom">
-        <p>© 2025 OCTALIGHT — Tüm hakları saklıdır</p>
-        <div className="developed-by">
-          <span>Developed by</span>
-          <img
-            src={ndmsoftwarelogo}
-            alt="NDM Software Logo"
-            className="developer-logo"
-          />
+      <div className="footer-right">
+        <div className="footer-menu">
+          <a href="/home">ANASAYFA</a>
+          <a href="/about">HAKKIMIZDA</a>
+          <a href="/koleksiyon">KOLEKSİYON</a>
+          <a href="/tasarimcilar">TASARIMCILAR</a>
+          <a href="#">VİZYON-MİSYON</a>
+          <a href="#">İLETİŞİM</a>
         </div>
+        <div className="footer-social-title">BİZİ TAKİP EDİN</div>
+        <div className="footer-social">
+          <a href="#"><FaInstagram /></a>
+          <a href="#"><FaFacebook /></a>
+          <a href="#"><FaLinkedin /></a>
+        </div>
+        <div className="footer-mail">info@octalight.com</div>
       </div>
-    </footer>
-  );
-};
+    </div>
+    <div className="footer-bottom">
+      <p>© 2025 OCTALIGHT — Tüm hakları saklıdır</p>
+      <div className="developed-by">
+        <span>Developed by</span>
+        <img
+          src={ndmsoftwarelogo}
+          alt="NDM Software Logo"
+          className="developer-logo"
+        />
+      </div>
+    </div>
+  </footer>
+);
 
 export default Footer;
