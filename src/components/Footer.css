@@ -1,108 +1,147 @@
 .footer {
-  background-color: #232323;
-  color: #fcfcfc;
-  padding: 40px 24px 20px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
-}
-
-.footer-top {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 40px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #dad9d4;
+  padding: 48px 4vw 32px 4vw;
+  background: #232323;
+  color: #fff;
+  gap: 36px;
+  font-family: 'Montserrat', Arial, sans-serif;
 }
 
-.newsletter h4,
-.follow-title {
-  font-size: 16px;
-  margin-bottom: 12px;
-  color: #fcfcfc;
-  letter-spacing: 0.5px;
-}
-
-.newsletter-form {
+.footer-left {
+  min-width: 340px;
+  max-width: 420px;
   display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 18px;
 }
 
-.newsletter-form input {
-  padding: 10px 14px;
-  border: 1px solid #fcfcfc;
-  background-color: #232323;
-  color: #fcfcfc;
-  border-radius: 6px;
-  outline: none;
-  font-size: 14px;
-  width: 220px;
-  transition: border-color 0.3s ease;
+.footer-logo {
+  font-size: 38px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: #fff;
+  margin-bottom: 18px;
 }
 
-.newsletter-form input:focus {
-  border-color: #dad9d4;
-}
-
-.newsletter-form button {
-  background-color: #fcfcfc;
-  color: #232323;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 6px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.newsletter-form button:hover {
-  background-color: #dad9d4;
-  color: #121212;
-}
-
-.social-contact {
+.footer-right {
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  text-align: right;
+  gap: 22px;
 }
 
-.social-icons {
+.footer-social-title,
+.newsletter-title {
+  color: #8c8e92;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 7px;
+  letter-spacing: 1px;
+}
+
+.footer-social {
   display: flex;
-  gap: 15px;
-  font-size: 20px;
+  gap: 18px;
+  margin-bottom: 12px;
+}
+.footer-social a {
+  color: #fff;
+  font-size: 22px;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+.footer-social a:hover {
+  opacity: 1;
+}
+
+.footer-mail {
+  color: #fff;
+  font-size: 16px;
+  opacity: 0.9;
+  margin-top: 12px;
+  letter-spacing: 0.5px;
+}
+
+.footer-menu {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 18px;
+  font-size: 16px;
+  font-weight: 700;
+  flex-wrap: wrap;
+}
+.footer-menu a {
+  color: #fff;
+  text-decoration: none;
+  transition: opacity 0.2s;
+  letter-spacing: 0.8px;
+}
+.footer-menu a:hover {
+  opacity: 0.75;
+}
+
+.footer-newsletter {
+  width: 410px;
+  max-width: 100%;
+  margin-top: 8px;
+}
+.newsletter-title {
   margin-bottom: 10px;
 }
-
-.social-icons a {
-  color: #fcfcfc;
-  text-decoration: none;
-  transition: transform 0.3s ease, color 0.3s ease;
+.newsletter-form {
+  display: flex;
+  width: 150%;
 }
 
-.social-icons a:hover {
-  transform: scale(1.2);
-  color: #dad9d4;
+.newsletter-form input[type="email"] {
+  flex: 2;
+  min-width: 400px;
+  padding: 15px 18px;
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  font-size: 17px;
+  border-right: none;
+  outline: none;
+  border-radius: 0;
+  transition: background 0.2s;
 }
-
-.email {
-  font-size: 14px;
-  color: #fcfcfc;
-  opacity: 0.9;
+.newsletter-form input::placeholder {
+  color: #8c8e92;
+  font-weight: 400;
+}
+.newsletter-form button {
+  background: transparent;
+  color: #fff;
+  font-weight: 900;
+  border: 1px solid #fff;
+  border-left: none;
+  font-size: 15px;
+  padding: 0 20px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s;
+}
+.newsletter-form button:hover {
+  background: #fff;
+  color: #14191f;
 }
 
 .footer-bottom {
-  margin-top: 24px;
-  padding-top: 16px;
-  font-size: 13px;
+  background: #232323;        
+  width: 100%;
+  margin-top: 0;               
+  padding: 16px 4vw 10px 4vw;  
+  border-top: 1px solid #dad9d4;
+  font-size: 14px;
   color: #dad9d4;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  border-top: 1px solid #dad9d4;
 }
 
 .developed-by {
@@ -112,14 +151,28 @@
   font-size: 12px;
   opacity: 0.9;
 }
-
 .developer-logo {
   height: 22px;
   width: auto;
-  opacity: 0.85;
-  transition: transform 0.3s ease;
 }
 
-.developer-logo:hover {
-  transform: scale(1.1);
+@media (max-width: 900px) {
+  .footer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 24px;
+  }
+  .footer-right {
+    align-items: flex-start;
+  }
+  .footer-newsletter {
+    width: 100%;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 13px;
+    padding: 10px 4vw;
+    gap: 8px;
+  }
 }
