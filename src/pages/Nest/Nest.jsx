@@ -9,37 +9,17 @@ import Header from '../../components/Header';
 import ScrollToTop from '../../components/ScrollToTop';
 
 import heroImage from '../../assets/hero.jpg';
-import img1 from '../../assets/isik1.jpg';
-import img2 from '../../assets/isik2.jpg';
-import img3 from '../../assets/isik3.jpg';
+
 
 import Donme from '../../components/Donme';
 
-import ResimKismi from '../../components/ResimKismi';
+
+import ResimKismi2 from '../../components/ResimKismi2';
 
 const Nest = () => {
   const [loading, setLoading] = useState(true);
 
-  const contentData = [
-    {
-      image: img1,
-      text:
-        'Inspired by nature’s organic forms, the Nest collection brings warmth and tranquility to your living spaces with soft lines and gentle light.',
-      title: 'The Meeting of Elegance and Light',
-    },
-    {
-      image: img2,
-      text:
-        'The comfort of rounded forms merges with contemporary technology, creating designs that connect emotionally as well as visually.',
-      title: 'Harmony of Technology and Art',
-    },
-    {
-      image: img3,
-      text:
-        'Nest does not only light your space, it makes it livable.',
-      title: 'Timeless Value and Design',
-    },
-  ];
+  
 
   useEffect(() => {
     AOS.init({
@@ -64,7 +44,12 @@ const Nest = () => {
       </div>
     );
   }
-
+const scrollToContent = () => {
+  window.scrollTo({
+    top: 800, // Sayfanın neresine gideceğini belirle. 800 px aşağı mesela.
+    behavior: 'smooth'
+  });
+};
   return (
     <>
       <Header />
@@ -85,7 +70,13 @@ const Nest = () => {
             <span>NEST</span>
           </div>
         </div>
-
+<div className="scroll-down-container" onClick={scrollToContent}>
+          <div className="scroll-down-arrow">
+            <svg width="100" height="120" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 10L12 15L17 10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </div>
+        </div>
         <div className="hero-section">
           <div className="hero-image-container">
             <img
@@ -102,24 +93,14 @@ const Nest = () => {
             </div>
           </div>
         </div>
-<br></br><br></br><br></br>
+
+        <br /><br /><br />
+
         <Donme />
 
-        <div className="collection-story">
-          <div className="story-content">
-            <h2 className="story-title" data-aos="fade-up">
-              NEST COLLECTION
-            </h2>
-            <p className="story-subtitle" data-aos="fade-up" data-aos-delay="200">
-              Perfect harmony of light and design
-            </p>
-          </div>
-
-         
-
-          </div>
-        </div>
-      <ResimKismi></ResimKismi>
+        {/* contentDataa dizisini ResimKismi bileşenine prop olarak gönderiyoruz */}
+        <ResimKismi2></ResimKismi2>
+      </div>
     </>
   );
 };

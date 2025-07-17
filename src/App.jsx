@@ -6,7 +6,7 @@ import Koleksiyon from './pages/Koleksiyon/Koleksiyon';
 import Golden from './pages/Golden/Golden';
 import Nest from './pages/Nest/Nest';
 import Pearls from './pages/Pearls/Pearls';
-import Ronmite from './pages/Ronmite/Ronmite';
+import Ironmite from './pages/Ironmite/Ironmite';
 
 import Footer from './components/Footer';
 import DonmeDolapKarti from './components/DonmeDolapKarti';
@@ -76,10 +76,10 @@ const App = () => {
               }
             />
 
-            {/* Koleksiyon ve Diğer Sayfalar */}
+       
            
 
-            {/* Hakkımızda */}
+           
         <Route path="/hakkimizda" element={<About />} />
          <Route path="/" element={<Home />} />
         <Route path="home" element={<Home />} />
@@ -87,7 +87,7 @@ const App = () => {
         <Route path="/golden" element={<Golden />} />
        <Route path="/nest" element={<Nest />} />
         <Route path="/pearls" element={<Pearls />} />
-        <Route path="/ronmite" element={<Ronmite />} />
+        <Route path="/ironmite" element={<Ironmite />} />
         <Route path="/about" element={<About/>}/>
  <Route path='/tasarimcilar' element={<Tasarimcilar/>}/>
           </Routes>

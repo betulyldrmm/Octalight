@@ -9,35 +9,17 @@ import Header from '../../components/Header';
 import ScrollToTop from '../../components/ScrollToTop';
 
 import heroImage from '../../assets/hero.jpg';
-import img1 from '../../assets/isik1.jpg';
-import img2 from '../../assets/isik2.jpg';
-import img3 from '../../assets/isik3.jpg';
+
 
 import Donme from '../../components/Donme';
 
-import Galeri from '../../components/Galeri';
+
 import ResimKismi from '../../components/ResimKismi';
 
 const Golden = () => {
   const [loading, setLoading] = useState(true);
 
-  const contentData = [
-    {
-      image: img1,
-      text: 'The Golden Hour collection brings the magic of the day\'s most enchanting moments into your living spaces, blending the elegance of warm golden tones with modern design. This line recreates the magic of natural light, creating a timeless atmosphere in your interiors while offering the perfect balance of luxury and comfort.',
-      title: 'The Meeting of Elegance and Light',
-    },
-    {
-      image: img2,
-      text: 'Behind the minimalist forms lies sophisticated technology, transforming each piece into not only a lighting element but also an artistic expression. This collection reflects the pursuit of perfection in every detail and is designed with an understanding of the dynamics of modern life.',
-      title: 'Harmony of Technology and Art',
-    },
-    {
-      image: img3,
-      text: 'Blending the warmth of gold with the functionality of modern life, this collection promises much more than ordinary lighting. Each piece creates timeless value, transforming your living spaces into works of art.',
-      title: 'Timeless Value and Design',
-    },
-  ];
+  
 
   useEffect(() => {
     AOS.init({
@@ -62,6 +44,13 @@ const Golden = () => {
       </div>
     );
   }
+  const scrollToContent = () => {
+  window.scrollTo({
+    top: 800, // Sayfanın neresine gideceğini belirle. 800 px aşağı mesela.
+    behavior: 'smooth'
+  });
+};
+
 
   return (
     <>
@@ -84,7 +73,14 @@ const Golden = () => {
             <span className="sidebarr-text">GOLDEN HOUR</span>
           </div>
         </div>
-
+<div className="scroll-down-container" onClick={scrollToContent}>
+          <div className="scroll-down-arrow">
+            <svg width="100" height="120" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 10L12 15L17 10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </div>
+        </div>
+    
         {/* Hero Section */}
         <div className="hero-section">
           <div className="hero-image-container">
@@ -95,8 +91,8 @@ const Golden = () => {
               loading="lazy"
             />
             <div className="hero-overlay">
-              <div className="hero-content" data-aos="fade-up">
-                <h1 className="hero-title">GOLDEN HOUR</h1>
+              <div className="hero-conten" data-aos="fade-up">
+                <h1 className="hero-titl">GOLDEN HOUR</h1>
                 <p className="hero-subtitle">
                   Modern and elegant lighting for your dreams
                 </p>

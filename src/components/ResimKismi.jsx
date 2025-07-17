@@ -1,4 +1,3 @@
-
 import './ResimKismi.css';
 
 import lamp from "../assets/lamp.jpg";
@@ -26,27 +25,27 @@ const contentData = [
 const ResimKismi = () => {
   return (
     <div className="modern-gallery">
-      <div className="content-container">
+      <div className="content-containerr">
         {contentData.map((item, index) => (
-          <div key={index} className={`content-section ${index === 1 ? 'reverse' : ''}`}>
-            <div className="image-container">
+          <div key={index} className={`content-sectionn ${index === 1 ? 'reverse' : ''}`}>
+            <div className="image-containerr">
               <img
                 src={item.image}
                 alt={`Golden Hour ${index + 1}`}
-                className="section-image"
+                className="section-imagee"
                 loading="lazy"
               />
-              <div className="image-overlay"></div>
+              <div className="image-overlayy"></div>
             </div>
             
-            <div className="content-panel">
-              <div className="section-number">
+            <div className="content-panell">
+              <div className="section-numberr">
                 {String(index + 1).padStart(2, '0')} / {String(contentData.length).padStart(2, '0')}
               </div>
               
-              <div className="content-text animate-fadeInUp">
-                <h3 className="section-title">{item.title}</h3>
-                <p className="section-text">{item.text}</p>
+              <div className="content-textt animate-fadeInUp">
+                <h3 className="section-titlee">{item.title}</h3>
+                <p className="section-textt">{item.text}</p>
               </div>
             </div>
           </div>

@@ -26,7 +26,7 @@ const Koleksiyon = () => {
     { id: 'golden-hour',description:"Sıcak altın tonlarının zarafeti..", image: goldenHour, route: '/golden', kategori: 'Golden Hour' },
     { id: 'nest',description:"Doğanın organik formlarından ilham alan Nest koleksiyonu..", image: nest, route: '/nest', kategori: 'Nest' },
     { id: 'pearls', description:" Zarafetin ve lüksün simgesi olan inci..",image: pearls, route: '/pearls', kategori: 'Pearls' },
-    { id: 'ironmute',description:" Endüstriyel tasarımın gücü ile minimalist estetiğin zarafeti.." ,image: ironmute, route: '/ironmute', kategori: 'Ironmute' },
+    { id: 'ironmute',description:" Endüstriyel tasarımın gücü ile minimalist estetiğin zarafeti.." ,image: ironmute, route: '/ironmite', kategori: 'Ironmute' },
   ];
 
 

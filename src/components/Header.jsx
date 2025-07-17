@@ -10,7 +10,7 @@ const Header = () => {
   const location = useLocation();
 
   // Transparan olması gereken sayfalar
-  const transparentRoutes = ['/', '/koleksiyon', '/golden', '/nest','/about',"/home","/tasarimcilar","/pearls","/ronmite"];
+  const transparentRoutes = ['/', '/koleksiyon', '/golden', '/nest','/about',"/home","/tasarimcilar","/pearls","/ironmite"];
   const isTransparentPage = transparentRoutes.includes(location.pathname);
 
   useEffect(() => {

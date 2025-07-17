@@ -1,39 +1,38 @@
+// Tasarimcilar.jsx
 import React from 'react';
 import './Tasarimcilar.css';
-import designerPhoto from '../../assets/designer.jpg';
+import Header from '../../components/Header';
+import heroImage from '../../assets/hero.jpg'; // hero.jpg dosyan src/assets klasöründe olmalı
+
+const designerPhoto = 'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80';
 
 const Tasarimcilar = () => {
   return (
-    <section className="designer-section">
-      <div className="designer-container">
-        <div className="designer-header">
-          <h1>TASARIMCILAR</h1>
-          <p>
-            Estetik ve işlevselliği bir araya getiren yaratıcı vizyonerlerimizle tanışın.
-            Her biri, mekânlarınıza sadece görsel güzellik katmakla kalmaz, aynı zamanda ruh ve anlam da taşır.
-            Tasarımlarında doğadan ilham alır, modern çizgilerle klasik unsurları harmanlarlar.
-            Sürekli yenilik peşindedirler ve mekanlarınıza değer katan detaylara büyük önem verirler.
-            Sizin için en iyi yaşam alanlarını yaratmak amacıyla sanat ve teknolojiyi birleştirirler.
-          </p>
+    <>
+      <Header />
+      <section className="hero-section" style={{ backgroundImage: `url(${heroImage})` }}>
+        <div className="hero-overlay">
+          <h1 className="hero-title">TASARIMCILAR</h1>
         </div>
+      </section>
 
-        <div className="designer-card">
-          <div className="designer-image-wrapper">
-            <img src={designerPhoto} alt="Tasarımcı Ayşe Yılmaz" className="designer-image" />
+      <main className="designer-main">
+        <div className="designer-content">
+          <div className="designer-photo">
+            <img src={designerPhoto} alt="Mehmet Demir" />
           </div>
-          <div className="designer-info">
-            <h2 className="designer-name">Ayşe Yılmaz</h2>
+          <div className="designer-details">
+            <h2 className="designer-name">Mehmet Demir</h2>
             <p className="designer-bio">
-              Ayşe Yılmaz, tasarımlarında doğallığı ve sıcaklığı merkeze alır. Golden Hour ve Pearls koleksiyonları ile zarif, minimal ve huzur veren mekanlar yaratır.
-              Lüksü yalınlıkla buluşturarak çağdaş estetiği yaşam alanlarına taşır.
-              Tasarım sürecinde kullanıcı deneyimini ön planda tutar ve mekânların ruhunu yansıtacak özel çözümler üretir.
-              Sanat ve işlevselliği dengede tutarak her projeyi benzersiz kılar.
+              Mehmet Demir, tasarım dünyasında minimalizm ve fonksiyonelliği birleştiren yaratıcı bir profesyoneldir.
+              Her projesinde kullanıcı odaklı çözümler geliştirir ve detaylara önem verir. Tasarımlarında doğadan ve
+              modern mimariden ilham alarak mekanlara sıcaklık ve estetik katar. Yenilikçi bakış açısıyla, her yaşam
+              alanını bir sanat eserine dönüştürür.
             </p>
-            <button className="designer-button">Daha Fazla</button>
           </div>
         </div>
-      </div>
-    </section>
+      </main>
+    </>
   );
 };
 

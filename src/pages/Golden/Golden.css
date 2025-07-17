@@ -103,14 +103,14 @@ html {
   text-align: center;
 }
 
-.hero-content {
+.hero-conten {
   color: var(--text-light);
-  max-width: 800px;
+  max-width: 900px;
   padding: 0 20px;
 }
 
-.hero-title {
-  font-size: clamp(3rem, 8vw, 6rem);
+.hero-titl {
+  font-size: clamp(3.5rem, 8vw, 6rem);
   font-weight: 700;
   color: rgb(252, 252, 252);
   text-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
@@ -125,7 +125,7 @@ html {
 }
 
 .sidebarr {
-  position: absolute;
+  position:fixed;
   top: 50%;
   left: 10px;
   transform: translateY(-50%);
@@ -140,7 +140,7 @@ html {
 }
 
 .sidebarr-link {
-  display: flex;
+  display:flex;
   align-items: center;
   gap: 12px;
   padding: 12px 16px;
@@ -149,6 +149,7 @@ html {
   border-radius: 12px;
   transition: var(--transition-speed);
   font-size: 1rem;
+
 }
 
 .sidebarr-link:hover {
@@ -334,4 +335,41 @@ html {
     width: 50px;
     height: 2px;
   }
+}
+
+.scroll-down-container {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.scroll-down-container:hover {
+  transform: translateX(-50%) translateY(-5px);
+}
+
+.scroll-down-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.scroll-down-arrow svg {
+  color: rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+}
+
+.scroll-down-container:hover .scroll-down-arrow {
+  border-color: #FCFCFC;
+}
+
+.scroll-down-container:hover .scroll-down-arrow svg {
+  color: #FCFCFC;
 }
