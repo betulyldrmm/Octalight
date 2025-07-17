@@ -1,91 +1,84 @@
-.donmedolap-wrapper {
-  display: flex;
-  justify-content: center;
-  padding: 60px 0;
+.yeni-donmedolap-wrapper {
+  display: flex;                   
+  justify-content: center;      
+  padding: 60px 0;                 
+}
+.yeni-kart-container {
+  display: flex;                   
+  justify-content: center;         
+  align-items: center;             
+  position: relative;           
+  height: 360px;                   
+  width: 100%;                     
+  max-width: 1200px;               
+  perspective: 1000px;             
+}
+.yeni-urun-karti {
+  position: absolute;              
+  width: 360px;                   
+  height: 500px;                   
+  background: #fcfcfc;             
+  border-radius: 20px;             
+  text-align: center;           
+  padding: 20px;                   
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);  
+  display: flex;                  
+  flex-direction: column;          
+  justify-content: space-between;  
+  transition: all 0.5s ease;       
+  opacity: 0;                     
+  transform: scale(0.8);         
+  z-index: 0;                      
 }
 
-.kart-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  height: 460px;
-  width: 100%;
-  max-width: 1200px;
-  perspective: 1000px;
+.yeni-urun-karti img {
+  width: 100%;                 
+  height: 340px;                   
+  object-fit: cover;               
+  border-radius: 12px;          
 }
 
-.urun-karti {
-  position: absolute;
-  width: 320px;
-  height: 440px;
-  background: #fcfcfc;
-  border-radius: 20px;
-  text-align: center;
-  padding: 20px;
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: all 0.5s ease;
-  opacity: 0;
-  transform: scale(0.8);
-  z-index: 0;
+.yeni-urun-karti h3 {
+  font-size: 17px;                 
+  color: #232323;                 
+  margin: 10px 0;                 
 }
 
-.urun-karti img {
-  width: 100%;
-  height: 340px;
-  object-fit: cover;
-  border-radius: 12px;
-
+.yeni-kesfet-btn {
+  background-color: #232323;      
+  color: #fcfcfc;                  
+  border: none;                   
+  padding: 10px 20px;              
+  border-radius: 8px;             
+  cursor: pointer;                 
+  font-weight: bold;               
+  transition: background-color 0.3s ease; 
 }
 
-.urun-karti h3 {
-  font-size: 17px;
-  color: #232323;
-  margin: 10px 0;
+.yeni-kesfet-btn:hover {
+  background-color: #555;          
 }
 
-.kesfet-btn {
-  background-color: #232323;
-  color: #fcfcfc;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
+.yeni-urun-karti.yeni-aktif {
+  transform: translateX(0) scale(1);   
+  opacity: 1;                          
+  z-index: 3;                          
 }
 
-.kesfet-btn:hover {
-  background-color: #555;
+.yeni-urun-karti.yeni-sol {
+  transform: translateX(-360px) scale(0.95); 
+  opacity: 1;                                
+  z-index: 2;                               
 }
 
-/* Aktif kart */
-.urun-karti.aktif {
-  transform: translateX(0) scale(1);
-  opacity: 1;
-  z-index: 3;
+.yeni-urun-karti.yeni-sag {
+  transform: translateX(360px) scale(0.95);  
+  opacity: 1;                             
+  z-index: 2;                                
 }
 
-/* Sola kayan kart */
-.urun-karti.sol {
-  transform: translateX(-360px) scale(0.95);
-  opacity: 1;
-  z-index: 2;
-}
-
-/* Sağa kayan kart */
-.urun-karti.sag {
-  transform: translateX(360px) scale(0.95);
-  opacity: 1;
-  z-index: 2;
-}
-
-/* Diğer kartlar */
-.urun-karti.gizli {
-  opacity: 0;
-  pointer-events: none;
-  z-index: 0;
+.yeni-urun-karti.yeni-gizli {
+  opacity: 0;                
+  pointer-events: none;      
+  z-index: 0;                
 }
