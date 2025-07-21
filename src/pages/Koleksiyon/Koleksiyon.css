@@ -31,8 +31,39 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(35, 35, 35, 0.2); 
+  background: rgba(35, 35, 35, 0.4); 
   z-index: 2;
+}
+
+.koleksiyon-hero-content {
+  text-align: center;
+  z-index: 10;
+  position: relative;
+}
+
+.koleksiyon-hero-title {
+  font-size: clamp(3.5rem, 5.2vw, 5.2rem); 
+  font-weight: 700;
+  color: #FCFCFC;
+  margin-bottom: 24px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.koleksiyon-hero-subtitle {
+  font-size: clamp(1rem, 2vw, 1.3rem); 
+  font-weight: 300;
+  color: #FCFCFC;
+  margin: 0;
+  font-family: 'Poppins', 'Inter', sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
 }
 
 .scroll-down-container {
@@ -108,46 +139,6 @@ body {
   pointer-events: none;
 }
 
-.koleksiyon-header {
-  text-align: center;
-  margin-bottom: 80px;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.koleksiyon-header h1 {
-  font-size: clamp(7rem, 7vw, 5rem); 
-  font-weight: 700;
-  color: #FCFCFC;
-  margin-bottom: 24px;
-  font-family: 'Playfair Display', 'Montserrat', serif;
-  letter-spacing: 0.5px;
-  line-height: 1.2;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.koleksiyon-header p {
-  font-size: clamp(1rem, 3vw, 1rem); 
-  font-weight: 300;
-  color: #FCFCFC;
-  margin-bottom: 24px;
-  font-family: 'Poppins', 'Inter', sans-serif;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.kategori-description {
-  color: #E0E0E0;
-  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
-  font-family: 'Poppins', 'Inter', sans-serif;
-  font-weight: 400;
-  line-height: 1.6;
-  max-width: 500px;
-}
-
 .koleksiyon-grid {
   display: flex;
   flex-direction: column;
@@ -191,6 +182,15 @@ body {
   letter-spacing: -1px;
   line-height: 1.2;
   text-transform: uppercase;
+}
+
+.kategori-description {
+  color: #E0E0E0;
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  font-family: 'Poppins', 'Inter', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  max-width: 500px;
 }
 
 .item-link-left {
@@ -251,8 +251,6 @@ body {
   filter: brightness(0.9) saturate(0.95);
 }
 
-
-
 @media (max-width: 1024px) {
   .koleksiyon-container {
     padding: 100px 30px 150px 30px;
@@ -270,8 +268,8 @@ body {
     font-size: 2.5rem;
   }
 
-  .koleksiyon-header h1 {
-    font-size: 3rem;
+  .koleksiyon-hero-title {
+    font-size: 4rem;
   }
 }
 
@@ -295,11 +293,11 @@ body {
     font-size: 2rem;
   }
 
-  .koleksiyon-header h1 {
-    font-size: 2.5rem;
+  .koleksiyon-hero-title {
+    font-size: 3rem;
   }
 
-  .koleksiyon-header p {
+  .koleksiyon-hero-subtitle {
     font-size: 1rem;
   }
 
@@ -321,8 +319,8 @@ body {
     font-size: 1.5rem;
   }
 
-  .koleksiyon-header h1 {
-    font-size: 2rem;
+  .koleksiyon-hero-title {
+    font-size: 2.5rem;
   }
 
   .item-link-left {
@@ -333,4 +331,4 @@ body {
   .item-image-container-right {
     height: 250px;
   }
-} 
+}

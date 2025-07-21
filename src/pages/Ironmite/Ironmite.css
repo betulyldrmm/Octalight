@@ -94,7 +94,7 @@ body {
 }
 
 .hero-title {
-  font-size: clamp(3rem, 8vw, 6rem);
+  font-size: clamp(3.5rem, 8vw, 6rem);
   font-weight: 700;
  
  color: rgb(252, 252, 252);

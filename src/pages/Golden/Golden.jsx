@@ -90,7 +90,7 @@ const Golden = () => {
               className="hero-image"
               loading="lazy"
             />
-            <div className="hero-overlay">
+            <div className="hero-overlayy">
               <div className="hero-conten" data-aos="fade-up">
                 <h1 className="hero-titl">GOLDEN HOUR</h1>
                 <p className="hero-subtitle">

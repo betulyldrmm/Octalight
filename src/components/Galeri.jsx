@@ -1,52 +1,27 @@
-import React, { useState } from 'react';
-import "./Galeri.css"
-import lamp from "../assets/lamp.jpg";
+import React from 'react';
+import './Galeri.css';
+import img1 from '../assets/1.jpg';
+import img2 from '../assets/2.jpg';
+import img3 from '../assets/3.jpg';
+import img4 from '../assets/4.jpg';
+import img5 from '../assets/gece.jpg';
+
+
 const Galeri = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const images = [lamp, lamp, lamp];
-
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) => 
-      prevIndex === images.length - 1 ? 0 : prevIndex + 1
-    );
-  };
-
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex) => 
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
-    );
-  };
-
-  const goToSlide = (index) => {
-    setCurrentIndex(index);
-  };
+  const images = [img1, img2, img3, img4, img5];
 
   return (
-    <div className="gallery-container">
-      <h1 className="gallery-title">GALERİ</h1>
-      
-      <div className="gallery-wrapper">
-        <div className="gallery-track" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
-          {images.map((image, index) => (
-            <div key={index} className="gallery-slide">
-              <img src={image} alt={`Lamp ${index + 1}`} />
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div className="gallery-dots">
-        {images.map((_, index) => (
-          <button
-            key={index}
-            className={`dot ${index === currentIndex ? 'active' : ''}`}
-            onClick={() => goToSlide(index)}
-          />
-        ))}
-      </div>
+    <div className="galeri-container">
+      {images.map((src, index) => (
+        <img
+          key={index}
+          src={src}
+          alt={`Foto ${index + 1}`}
+          className="galeri-foto"
+        />
+      ))}
     </div>
   );
 };
-
+ 
 export default Galeri;

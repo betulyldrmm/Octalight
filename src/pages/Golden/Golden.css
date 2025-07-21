@@ -93,10 +93,10 @@ html {
   object-fit: cover;
 }
 
-.hero-overlay {
+.hero-overlayy{
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3));
+  background: linear-gradient(135deg, rgba(65, 64, 64, 0.6), rgba(0, 0, 0, 0.3));
   display: flex;
   justify-content: center;
   align-items: center;

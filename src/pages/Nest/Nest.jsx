@@ -85,7 +85,7 @@ const scrollToContent = () => {
               className="hero-image"
               loading="lazy"
             />
-            <div className="hero-overlay">
+            <div className="hero-overlayy">
               <div className="hero-content" data-aos="fade-up">
                 <h1 className="hero-title">NEST</h1>
                 <p className="hero-subtitle">Modern lighting beyond expectations</p>
