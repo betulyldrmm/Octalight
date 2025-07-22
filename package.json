@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "aos": "^2.3.4",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
     "prop-types": "^15.8.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
@@ -28,5 +30,18 @@
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^16.2.0",
     "vite": "^7.0.0"
-  }
+  },
+  "description": "HEAD\r # React + Vite",
+  "main": "eslint.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/betulyldrmm/EnneWeb.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/betulyldrmm/EnneWeb/issues"
+  },
+  "homepage": "https://github.com/betulyldrmm/EnneWeb#readme"
 }

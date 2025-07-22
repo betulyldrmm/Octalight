@@ -20,7 +20,7 @@ body {
 
 .hero-section {
   width: 100%;
-  height: 100vh;
+  height: 400px;
   background-size: cover;
   background-position: center;
   position: relative;
@@ -61,37 +61,10 @@ body {
   color: #e0e0e0;
 }
 
-.scroll-down-container {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  cursor: pointer;
-  z-index: 10;
-  transition: all 0.3s ease;
-}
 
 
 
 
-.scroll-arrow {
-  border-radius: 50%;
-  padding: 8px;
-
-
-}
-
-.scroll-arrow svg {
-  color: rgba(255, 255, 255, 0.8);
-  transition: all 0.3s ease;
-}
-
-.scroll-down-container:hover .scroll-arrow svg {
-  color: #ffffff;
-}
 
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {

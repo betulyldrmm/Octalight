@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Tasarimcilar.css';
 import Header from '../../components/Header';
-import heroImage from '../../assets/lam.jpg';
+import heroImage from '../../assets/t.png';
 import Galeri from '../../components/Galeri';
 
 const designers = [
@@ -39,17 +39,14 @@ const Tasarimcilar = () => {
       <section className="hero-section" style={{ backgroundImage: `url(${heroImage})` }}>
         <div className="hero-overlay">
           <div className="hero-content">
-            <h1 className="hero-title">TASARIMCILAR</h1>
+            <h1 className="hero-title">TASARIMCIMIZ</h1>
             <p className="hero-subtitle">Yaşam Alanlarınızı Dönüştürüyoruz</p>
           </div>
+          
         </div>
         <div className="scroll-down-container" onClick={scrollToContent}>
           <div className="scroll-indicator">
-            <div className="scroll-arrow">
-              <svg width="100" height="100" viewBox="0 0 24 24" fill="none">
-                <path d="M7 10L12 15L17 10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </div>
+            
           </div>
         </div>
       </section>
@@ -98,10 +95,9 @@ const Tasarimcilar = () => {
       <section className="cta-section">
         <div className="container">
           <div className="cta-content">
-            <h2>Hayalinizdeki Mekanı Birlikte Yaratalım</h2>
+            <h2>Hayalinizdeki Işıklandırmayı Birlikte Yaratalım</h2>
             <p>Uzman tasarımcılarımızla ücretsiz danışmanlık için hemen iletişime geçin</p>
-            <button className="cta-button">Ücretsiz Danışmanlık</button>
-          </div>
+                 </div>
         </div>
       </section>
   

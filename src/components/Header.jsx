@@ -10,7 +10,7 @@ const Header = () => {
   const location = useLocation();
 
   // Transparan olması gereken sayfalar
-  const transparentRoutes = ['/', '/koleksiyon', '/golden', '/nest','/about',"/home","/tasarimcilar","/pearls","/ironmite"];
+  const transparentRoutes = ['/', '/koleksiyon', '/golden', '/nest','/about',"/home","/tasarimcilar","/pearls","/ironmite","/giris"];
   const isTransparentPage = transparentRoutes.includes(location.pathname);
 
   useEffect(() => {
@@ -54,7 +54,7 @@ const Header = () => {
             <li><a href='/home' className='nav-link'>ANASAYFA</a></li>
             <li><a href="/about" className="nav-link">HAKKIMIZDA</a></li>
             <li><a href="/koleksiyon" className="nav-link">KOLEKSİYON</a></li>
-            <li><a href="/tasarimcilar" className="nav-link">TASARIMCILAR</a></li>
+            <li><a href="/tasarimcilar" className="nav-link">TASARIMCIMIZ</a></li>
             <li><a href="#" className="nav-link">VİZYON-MİSYON</a></li>
             <li><a href="#" className="nav-link">İLETİŞİM</a></li>
           </ul>
@@ -99,21 +99,24 @@ const Header = () => {
             )}
           </div>
 
-          <div className="header-icons">
-            <button className="icon-btn search-btn" aria-label="Search">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                <circle cx="11" cy="11" r="8" stroke="currentColor" strokeWidth="2" />
-                <path d="m21 21-4.35-4.35" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </button>
+        <div className="header-icons">
+  <button className="icon-btn search-btn" aria-label="Search">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+      <circle cx="11" cy="11" r="8" stroke="currentColor" strokeWidth="2" />
+      <path d="m21 21-4.35-4.35" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  </button>
 
-            <button className="icon-btn profile-btn" aria-label="Profile">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                <circle cx="12" cy="7" r="4" stroke="currentColor" strokeWidth="2" />
-              </svg>
-            </button>
-          </div>
+  <button className="icon-btn profile-btn" aria-label="Profile">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      <circle cx="12" cy="7" r="4" stroke="currentColor" strokeWidth="2" />
+    </svg>
+  </button>
+
+  {/* Giriş Yap Butonu */}
+   <li><a href='/giris' className='nav-link'>GİRİŞ</a></li>
+</div>
         </div>
       </div>
     </header>

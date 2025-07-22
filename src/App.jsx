@@ -14,7 +14,7 @@ import CookieBanner from './components/CookieBanner';
 import Header from './components/Header';
 import About from './pages/About/About';
 import Donme from './components/Donme';
-
+import Giris from './pages/Giris/Giris';
 import ScrollToTop from './components/ScrollToTop';
 
 import AOS from 'aos';
@@ -90,6 +90,7 @@ const App = () => {
         <Route path="/ironmite" element={<Ironmite />} />
         <Route path="/about" element={<About/>}/>
  <Route path='/tasarimcilar' element={<Tasarimcilar/>}/>
+ <Route path='giris' element={<Giris/>}/>
           </Routes>
         </main>
 
