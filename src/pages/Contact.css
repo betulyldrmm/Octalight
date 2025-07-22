@@ -1,0 +1,245 @@
+:root {
+  --pro-bg: #dad9d4;       /* Ana açık arka plan rengi, tüm sayfa zemininde kullanılır */
+  --pro-white: #fcfcfc;       /* Beyaz, kartlarda ve kutularda arka plan için */
+  --pro-grey: #898989;     /* Gri ton, ikonlarda ve bazı başlıklarda */
+  --pro-dark: #232323;     /* Çok koyu siyah, başlık ve önemli metinlerde */
+  --pro-shadow: 0 12px 48px 0 rgba(30,41,59,0.10); /* Kartlara gölge efekti */
+  --pro-radius: 6px;      /* Kartların köşelerini yuvarlama miktarı */
+}
+
+/* Sayfa arka planı ve minimum yükseklik ayarı */
+body, .contact-pro-bg {
+  background: var(--pro-bg) !important;  /* Genel arka plan rengi */
+  min-height: 100vh;                     /* Sayfa minimum yüksekliği tam ekran */
+}
+
+/* Başlık (hero) alanı */
+.contact-pro-hero {
+  width: 100%;            /* Tam genişlik */
+  max-width: 780px;       /* Maksimum 780px genişlik */
+  margin: 0 auto;         /* Ortala */
+  padding: 70px 0 22px 0; /* Üst, sağ, alt, sol boşluk */
+  text-align: left;       /* Sola hizalı metin */
+}
+
+/* Başlık altında ince koyu çizgi (vurgulama için) */
+.contact-title-accent {
+  display: block;               /* Blok olarak görünür */
+  width: 44px; height: 5px;     /* Çizgi boyutu */
+  background: var(--pro-dark);  /* Çizgi rengi (koyu) */
+  border-radius: 2px;           /* Uçlar yuvarlatılmış */
+  margin-bottom: 8px;           /* Altında boşluk */
+}
+
+/* Ana büyük başlık */
+.contact-pro-title {
+  font-size: 2.6rem;        /* Yazı boyutu büyük */
+  font-weight: 800;         /* Yazı çok kalın */
+  color: var(--pro-dark);   /* Koyu siyah renk */
+  margin-bottom: 10px;      /* Altında boşluk */
+  letter-spacing: 0.5px;    /* Harfler arasında biraz boşluk */
+}
+
+/* Beyaz arka planlı iletişim kartı */
+.contact-pro-card {
+  width: 100%;
+  max-width: 750px;                                  /* Maksimum 750px */
+  margin: 0 auto;                                    /* Ortala */
+  background:  linear-gradient(120deg, #fff 93%, #f7f7f7 100%); /* Hafif gölge efekti */
+ border-radius: var(--pro-radius);                  /* Köşeler yuvarlak */
+  box-shadow: 0 8px 40px 0 rgba(30,41,59,0.13);      /* Kart gölgesi */
+  padding: 38px 36px 30px 36px;                      /* İç boşluklar */
+  margin-bottom: 54px;                               /* Altında boşluk */
+}
+
+/* Formun kendisi ve satırları */
+.contact-pro-form {
+  display: flex;             /* Flexbox ile sırala */
+  flex-direction: column;    /* Dikeyde sırala */
+  gap: 0;                    /* Satırlar arasında boşluk yok */
+}
+.contact-pro-form-row {
+  display: block;
+  margin-bottom: 22px;       /* Her satırın altında boşluk */
+}
+
+/* Tüm inputlar, selectler ve textarea'lar */
+.contact-pro-form-row input,
+.contact-pro-form-row select,
+.contact-pro-form-row textarea {
+  width: 100%;                      /* Tam genişlik */
+  box-sizing: border-box;            /* Padding ve border dahil */
+  border-radius: 13px;               /* Hafif oval köşeler */
+  background: #fafbfa;               /* Çok açık gri arka plan */
+  border: 1.3px solid #e7e7e7;       /* İnce gri kenar */
+  font-size: 16px;                   /* Orta boy yazı */
+  padding: 18px 16px;                /* İç boşluk */
+  color: #232323;                    /* Yazı koyu siyah */
+  outline: none;                     /* Focus çerçevesi yok */
+  transition: border 0.15s, box-shadow 0.15s;  /* Animasyonlu geçiş */
+}
+
+/* Tıklanmış ya da seçili alanlarda border ve gölge efekti */
+.contact-pro-form-row input:focus,
+.contact-pro-form-row select:focus,
+.contact-pro-form-row textarea:focus {
+  border: 1.3px solid var(--pro-grey);                /* Kenar rengi koyulaşır */
+  box-shadow: 0 2px 10px rgba(35,35,35,0.07);         /* Hafif gölge */
+}
+
+/* Mouse ile üstüne gelince kenarlık rengi koyulaşır */
+.contact-pro-form-row input:hover,
+.contact-pro-form-row select:hover,
+.contact-pro-form-row textarea:hover {
+  border: 1.3px solid #bdbdbd;                        /* Kenar rengi daha koyu */
+}
+
+/* Placeholder (gri, ince) */
+.contact-pro-form-row input::placeholder,
+.contact-pro-form-row textarea::placeholder {
+  color: #b4b4b4;         /* Açık gri yazı */
+  opacity: 1;
+  font-size: 15px;
+  letter-spacing: 0.3px;  /* Harf arası boşluk */
+}
+
+/* Select kutusunun ok simgesi ve stilleri */
+.contact-pro-form-row select {
+  min-width: 140px;   /* Minimum genişlik */
+  appearance: none;   /* Tarayıcı varsayılanı kaldır */
+  background: #fafbfa url("data:image/svg+xml;charset=UTF-8,<svg fill='black' height='13' viewBox='0 0 20 20' width='13' xmlns='http://www.w3.org/2000/svg'><path d='M7.293 8.293a1 1 0 011.414 0L10 9.586l1.293-1.293a1 1 0 111.414 1.414l-2 2a1 1 0 01-1.414 0l-2-2a1 1 0 010-1.414z'/></svg>") no-repeat right 0.9em center/1.4em 1.4em; /* Sağda ok simgesi */
+  padding-right: 40px;   /* Sağa boşluk bırak */
+}
+
+/* Çok satırlı input */
+.contact-pro-form-row textarea {
+  min-height: 110px;   /* Yüksekliği sabitle */
+  resize: vertical;    /* Sadece dikeyde büyüyebilir */
+}
+
+/* "Other" country alanı animasyonu */
+.fade-in-country {
+  animation: fadeIn 0.29s cubic-bezier(.77,0,.18,1) both;
+}
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(14px);}
+  100% { opacity: 1; transform: none;}
+}
+
+/* Gönder (Submit) butonu */
+.contact-pro-btn {
+  background: var(--pro-dark);           /* Koyu arka plan */
+  color: #fff;                          /* Beyaz yazı */
+  font-size: 20px; font-weight: 800;
+  border: none; border-radius: 13px;
+  width: 100%;                          /* Tam genişlik */
+  padding: 18px 0;                      /* Yüksek buton */
+  margin-top: 8px;
+  letter-spacing: 1px;
+  cursor: pointer;                      /* El işareti */
+  transition: background 0.17s, transform 0.12s; /* Hover animasyonu */
+  box-shadow: 0 3px 14px rgba(35,35,35,0.06);    /* Hafif gölge */
+}
+.contact-pro-btn:hover {
+  background: var(--pro-grey);          /* Hover: gri olur */
+  color: #fff;
+  transform: scale(1.016);              /* Hover: biraz büyür */
+}
+
+
+
+/* Adres, telefon vs. kutuları */
+.contact-pro-findus-row {
+  width: 100%;
+  max-width: 780px;
+  margin: 0 auto 32px auto;
+  display: flex;
+  gap: 20px;                            /* Kutular arası boşluk */
+}
+.contact-pro-findus-box {
+  background: #fcfcfc;                  /* Açık gri arka plan */
+  border-radius: 6px;                  /*  Yuvarlak köşe */
+  box-shadow: 0 2px 12px 0 rgba(30,41,59,0.06); /* Gölge */
+  flex: 1;                              /* Eşit genişlik */
+  min-width: 160px;
+  padding: 28px 18px 22px 18px;
+  text-align: center;                   /* Ortala */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.findus-icon {
+  color: var(--pro-grey);                /* İkon rengi gri */
+  font-size: 29px;
+  margin-bottom: 9px;
+}
+.findus-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--pro-dark);                /* Başlık koyu siyah */
+  margin-bottom: 2.5px;
+}
+.findus-desc {
+  font-size: 15px;
+  color: #898989;                           /* Daha açık koyu gri yazı */
+}
+
+/* Harita kutusu */
+.contact-pro-map {
+  width: 100%;
+  max-width: 780px;
+  margin: 0 auto 70px auto;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #f8f8f8;
+  box-shadow: 0 6px 32px rgba(35,35,35,0.09);
+  border: 1.3px solid #ededed;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* Mobil ve küçük ekranlar için responsive düzen */
+@media (max-width: 900px) {
+  .contact-pro-hero,
+  .contact-pro-card,
+  .contact-pro-findus-row,
+  .contact-pro-map {
+    max-width: 97vw;               /* Neredeyse tam ekran genişliği */
+   /* border-radius: 12px;           /Köşeler daha az yuvarlak */
+  }
+  .contact-pro-card {
+    padding: 24px 8vw 20px 8vw;    /* Kartlarda kenarlardan iç boşluk */
+  }
+  .contact-pro-findus-row {
+    flex-direction: column;        /* Kutular alta dizilir */
+    gap: 14px;
+  }
+  .contact-pro-map {
+    border-radius: 0px;          /*  Harita kutusu köşeleri daha az yuvarlak */
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-pro-hero { padding: 38px 0 14px 0; }
+  .contact-pro-card { padding: 14px 2vw 8px 2vw; }
+  .contact-pro-findus-row { gap: 10px; }
+}
+/* Sayfa başında header varsa, alta boşluk bırakır */
+.contact-pro-bg {
+  margin-top: 160px;
+}
+
+/* Footer ile içerik arasına boşluk bırakır */
+.footer-gap {
+  width: 100%;
+  height: 60px;
+  background: #dad9d4!important;
+}
+
+/* --------- EN ÖNEMLİSİ: Ad/Soyad başlıklarını siyah yapan kural --------- */
+/* Form başlıklarını, firstname ve lastname class’larını siyah yapar */
+.contact-pro-form-row label,
+.firstname,
+.lastname {
+  color: #232323 !important;   /* Her zaman koyu siyah/koyu renk */
+}
