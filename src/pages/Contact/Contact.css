@@ -1,123 +1,111 @@
 :root {
-  --pro-bg: #dad9d4;       /* Ana açık arka plan rengi, tüm sayfa zemininde kullanılır */
-  --pro-white: #fcfcfc;       /* Beyaz, kartlarda ve kutularda arka plan için */
-  --pro-grey: #898989;     /* Gri ton, ikonlarda ve bazı başlıklarda */
-  --pro-dark: #232323;     /* Çok koyu siyah, başlık ve önemli metinlerde */
-  --pro-shadow: 0 12px 48px 0 rgba(30,41,59,0.10); /* Kartlara gölge efekti */
-  --pro-radius: 6px;      /* Kartların köşelerini yuvarlama miktarı */
+  --pro-bg: #dad9d4;
+  --pro-white: #fcfcfc;
+  --pro-grey: #898989;
+  --pro-dark: #232323;
+  --pro-shadow: 0 12px 48px 0 rgba(30,41,59,0.10);
+  --pro-radius: 16px;
 }
 
-/* Sayfa arka planı ve minimum yükseklik ayarı */
 body, .contact-pro-bg {
-  background: var(--pro-bg) !important;  /* Genel arka plan rengi */
-  min-height: 100vh;                     /* Sayfa minimum yüksekliği tam ekran */
+  background: var(--pro-bg) !important;
+  min-height: 100vh;
 }
 
-/* Başlık (hero) alanı */
 .contact-pro-hero {
-  width: 100%;            /* Tam genişlik */
-  max-width: 780px;       /* Maksimum 780px genişlik */
-  margin: 0 auto;         /* Ortala */
-  padding: 70px 0 22px 0; /* Üst, sağ, alt, sol boşluk */
-  text-align: left;       /* Sola hizalı metin */
-}
-
-/* Başlık altında ince koyu çizgi (vurgulama için) */
-.contact-title-accent {
-  display: block;               /* Blok olarak görünür */
-  width: 44px; height: 5px;     /* Çizgi boyutu */
-  background: var(--pro-dark);  /* Çizgi rengi (koyu) */
-  border-radius: 2px;           /* Uçlar yuvarlatılmış */
-  margin-bottom: 8px;           /* Altında boşluk */
-}
-
-/* Ana büyük başlık */
-.contact-pro-title {
-  font-size: 2.6rem;        /* Yazı boyutu büyük */
-  font-weight: 800;         /* Yazı çok kalın */
-  color: var(--pro-dark);   /* Koyu siyah renk */
-  margin-bottom: 10px;      /* Altında boşluk */
-  letter-spacing: 0.5px;    /* Harfler arasında biraz boşluk */
-}
-
-/* Beyaz arka planlı iletişim kartı */
-.contact-pro-card {
   width: 100%;
-  max-width: 750px;                                  /* Maksimum 750px */
-  margin: 0 auto;                                    /* Ortala */
-  background:  linear-gradient(120deg, #fff 93%, #f7f7f7 100%); /* Hafif gölge efekti */
- border-radius: var(--pro-radius);                  /* Köşeler yuvarlak */
-  box-shadow: 0 8px 40px 0 rgba(30,41,59,0.13);      /* Kart gölgesi */
-  padding: 38px 36px 30px 36px;                      /* İç boşluklar */
-  margin-bottom: 54px;                               /* Altında boşluk */
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 70px 0 22px 0;
+  text-align: left;
+}
+.contact-title-accent {
+  display: block;
+  width: 44px; height: 5px;
+  background: var(--pro-dark);
+  border-radius: 2px;
+  margin-bottom: 8px;
+}
+.contact-pro-title {
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: var(--pro-dark);
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
 }
 
-/* Formun kendisi ve satırları */
+/* YANYANA FORM + HARİTA DİZİLİMİ */
+.contact-row-main {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 38px auto;
+  display: flex;
+  gap: 32px;
+  align-items: stretch;
+  justify-content: center;
+}
+.contact-pro-card {
+  background: var(--pro-white);
+  border-radius: var(--pro-radius);
+  box-shadow: 0 8px 40px 0 rgba(30,41,59,0.13);
+  padding: 38px 36px 30px 36px;
+  flex: 1 1 380px;
+  min-width: 340px;
+  max-width: 460px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .contact-pro-form {
-  display: flex;             /* Flexbox ile sırala */
-  flex-direction: column;    /* Dikeyde sırala */
-  gap: 0;                    /* Satırlar arasında boşluk yok */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .contact-pro-form-row {
   display: block;
-  margin-bottom: 22px;       /* Her satırın altında boşluk */
+  margin-bottom: 22px;
 }
-
-/* Tüm inputlar, selectler ve textarea'lar */
 .contact-pro-form-row input,
 .contact-pro-form-row select,
 .contact-pro-form-row textarea {
-  width: 100%;                      /* Tam genişlik */
-  box-sizing: border-box;            /* Padding ve border dahil */
-  border-radius: 13px;               /* Hafif oval köşeler */
-  background: #fafbfa;               /* Çok açık gri arka plan */
-  border: 1.3px solid #e7e7e7;       /* İnce gri kenar */
-  font-size: 16px;                   /* Orta boy yazı */
-  padding: 18px 16px;                /* İç boşluk */
-  color: #232323;                    /* Yazı koyu siyah */
-  outline: none;                     /* Focus çerçevesi yok */
-  transition: border 0.15s, box-shadow 0.15s;  /* Animasyonlu geçiş */
+  width: 100%;
+  border-radius: 13px;
+  background: #fafbfa;
+  border: 1.3px solid #e7e7e7;
+  font-size: 16px;
+  padding: 18px 16px;
+  color: #232323;
+  outline: none;
+  transition: border 0.15s, box-shadow 0.15s;
 }
-
-/* Tıklanmış ya da seçili alanlarda border ve gölge efekti */
 .contact-pro-form-row input:focus,
 .contact-pro-form-row select:focus,
 .contact-pro-form-row textarea:focus {
-  border: 1.3px solid var(--pro-grey);                /* Kenar rengi koyulaşır */
-  box-shadow: 0 2px 10px rgba(35,35,35,0.07);         /* Hafif gölge */
+  border: 1.3px solid var(--pro-grey);
+  box-shadow: 0 2px 10px rgba(35,35,35,0.07);
 }
-
-/* Mouse ile üstüne gelince kenarlık rengi koyulaşır */
 .contact-pro-form-row input:hover,
 .contact-pro-form-row select:hover,
 .contact-pro-form-row textarea:hover {
-  border: 1.3px solid #bdbdbd;                        /* Kenar rengi daha koyu */
+  border: 1.3px solid #bdbdbd;
 }
-
-/* Placeholder (gri, ince) */
 .contact-pro-form-row input::placeholder,
 .contact-pro-form-row textarea::placeholder {
-  color: #b4b4b4;         /* Açık gri yazı */
+  color: #b4b4b4;
   opacity: 1;
   font-size: 15px;
-  letter-spacing: 0.3px;  /* Harf arası boşluk */
+  letter-spacing: 0.3px;
 }
-
-/* Select kutusunun ok simgesi ve stilleri */
 .contact-pro-form-row select {
-  min-width: 140px;   /* Minimum genişlik */
-  appearance: none;   /* Tarayıcı varsayılanı kaldır */
-  background: #fafbfa url("data:image/svg+xml;charset=UTF-8,<svg fill='black' height='13' viewBox='0 0 20 20' width='13' xmlns='http://www.w3.org/2000/svg'><path d='M7.293 8.293a1 1 0 011.414 0L10 9.586l1.293-1.293a1 1 0 111.414 1.414l-2 2a1 1 0 01-1.414 0l-2-2a1 1 0 010-1.414z'/></svg>") no-repeat right 0.9em center/1.4em 1.4em; /* Sağda ok simgesi */
-  padding-right: 40px;   /* Sağa boşluk bırak */
+  min-width: 140px;
+  appearance: none;
+  background: #fafbfa url("data:image/svg+xml;charset=UTF-8,<svg fill='black' height='13' viewBox='0 0 20 20' width='13' xmlns='http://www.w3.org/2000/svg'><path d='M7.293 8.293a1 1 0 011.414 0L10 9.586l1.293-1.293a1 1 0 111.414 1.414l-2 2a1 1 0 01-1.414 0l-2-2a1 1 0 010-1.414z'/></svg>") no-repeat right 0.9em center/1.4em 1.4em;
+  padding-right: 40px;
 }
-
-/* Çok satırlı input */
 .contact-pro-form-row textarea {
-  min-height: 110px;   /* Yüksekliği sabitle */
-  resize: vertical;    /* Sadece dikeyde büyüyebilir */
+  min-height: 110px;
+  resize: vertical;
 }
-
-/* "Other" country alanı animasyonu */
 .fade-in-country {
   animation: fadeIn 0.29s cubic-bezier(.77,0,.18,1) both;
 }
@@ -125,105 +113,99 @@ body, .contact-pro-bg {
   0% { opacity: 0; transform: translateY(14px);}
   100% { opacity: 1; transform: none;}
 }
-
-/* Gönder (Submit) butonu */
 .contact-pro-btn {
-  background: var(--pro-dark);           /* Koyu arka plan */
-  color: #fff;                          /* Beyaz yazı */
-  font-size: 20px; font-weight: 800;
-  border: none; border-radius: 13px;
-  width: 100%;                          /* Tam genişlik */
-  padding: 18px 0;                      /* Yüksek buton */
+  background: var(--pro-dark);
+  color: #fff;
+  font-size: 20px;
+  font-weight: 800;
+  border: none;
+  border-radius: 13px;
+  width: 100%;
+  padding: 18px 0;
   margin-top: 8px;
   letter-spacing: 1px;
-  cursor: pointer;                      /* El işareti */
-  transition: background 0.17s, transform 0.12s; /* Hover animasyonu */
-  box-shadow: 0 3px 14px rgba(35,35,35,0.06);    /* Hafif gölge */
+  cursor: pointer;
+  transition: background 0.17s, transform 0.12s;
+  box-shadow: 0 3px 14px rgba(35,35,35,0.06);
 }
 .contact-pro-btn:hover {
-  background: var(--pro-grey);          /* Hover: gri olur */
+  background: var(--pro-grey);
   color: #fff;
-  transform: scale(1.016);              /* Hover: biraz büyür */
+  transform: scale(1.016);
 }
 
+/* Sağdaki HARİTA */
+.contact-pro-map-side {
+  flex: 1 1 340px;
+  max-width: 480px;
+  min-width: 320px;
+  background: #f8f8f8;
+  border-radius: var(--pro-radius);
+  box-shadow: 0 6px 32px rgba(35,35,35,0.09);
+  border: 1.3px solid #ededed;
+  overflow: hidden;
+  display: flex;
+  align-items: stretch;
+  min-height: 430px;
+}
 
-
-/* Adres, telefon vs. kutuları */
+/* Alttaki iletişim kutuları */
 .contact-pro-findus-row {
   width: 100%;
-  max-width: 780px;
+  max-width: 1200px;
   margin: 0 auto 32px auto;
   display: flex;
-  gap: 20px;                            /* Kutular arası boşluk */
+  gap: 20px;
+  justify-content: center;
 }
 .contact-pro-findus-box {
-  background: #fcfcfc;                  /* Açık gri arka plan */
-  border-radius: 6px;                  /*  Yuvarlak köşe */
-  box-shadow: 0 2px 12px 0 rgba(30,41,59,0.06); /* Gölge */
-  flex: 1;                              /* Eşit genişlik */
-  min-width: 160px;
+  background: #fcfcfc;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px 0 rgba(30,41,59,0.06);
+  flex: 1 1 180px;
+  min-width: 150px;
+  max-width: 340px;
   padding: 28px 18px 22px 18px;
-  text-align: center;                   /* Ortala */
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .findus-icon {
-  color: var(--pro-grey);                /* İkon rengi gri */
+  color: var(--pro-grey);
   font-size: 29px;
   margin-bottom: 9px;
 }
 .findus-title {
   font-size: 15px;
   font-weight: 700;
-  color: var(--pro-dark);                /* Başlık koyu siyah */
+  color: var(--pro-dark);
   margin-bottom: 2.5px;
 }
 .findus-desc {
   font-size: 15px;
-  color: #898989;                           /* Daha açık koyu gri yazı */
+  color: #898989;
 }
 
-/* Harita kutusu */
-.contact-pro-map {
-  width: 100%;
-  max-width: 780px;
-  margin: 0 auto 70px auto;
-  border-radius: 6px;
-  overflow: hidden;
-  background: #f8f8f8;
-  box-shadow: 0 6px 32px rgba(35,35,35,0.09);
-  border: 1.3px solid #ededed;
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
-}
-
-/* Mobil ve küçük ekranlar için responsive düzen */
-@media (max-width: 900px) {
-  .contact-pro-hero,
-  .contact-pro-card,
-  .contact-pro-findus-row,
-  .contact-pro-map {
-    max-width: 97vw;               /* Neredeyse tam ekran genişliği */
-   /* border-radius: 12px;           /Köşeler daha az yuvarlak */
+/* Responsive (Mobil) */
+@media (max-width: 1024px) {
+  .contact-row-main {
+    flex-direction: column;
+    gap: 32px;
+    max-width: 97vw;
   }
-  .contact-pro-card {
-    padding: 24px 8vw 20px 8vw;    /* Kartlarda kenarlardan iç boşluk */
-  }
-  .contact-pro-findus-row {
-    flex-direction: column;        /* Kutular alta dizilir */
-    gap: 14px;
-  }
-  .contact-pro-map {
-    border-radius: 0px;          /*  Harita kutusu köşeleri daha az yuvarlak */
+  .contact-pro-map-side, .contact-pro-card {
+    max-width: 100%;
+    min-width: 0;
   }
 }
-
-@media (max-width: 600px) {
+@media (max-width: 720px) {
   .contact-pro-hero { padding: 38px 0 14px 0; }
   .contact-pro-card { padding: 14px 2vw 8px 2vw; }
-  .contact-pro-findus-row { gap: 10px; }
+  .contact-row-main { gap: 18px; }
+  .contact-pro-findus-row { flex-direction: column; gap: 12px; }
 }
+
 /* Sayfa başında header varsa, alta boşluk bırakır */
 .contact-pro-bg {
   margin-top: 160px;
@@ -234,12 +216,4 @@ body, .contact-pro-bg {
   width: 100%;
   height: 60px;
   background: #dad9d4!important;
-}
-
-/* --------- EN ÖNEMLİSİ: Ad/Soyad başlıklarını siyah yapan kural --------- */
-/* Form başlıklarını, firstname ve lastname class’larını siyah yapar */
-.contact-pro-form-row label,
-.firstname,
-.lastname {
-  color: #232323 !important;   /* Her zaman koyu siyah/koyu renk */
 }
