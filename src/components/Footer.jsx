@@ -21,7 +21,7 @@ const Footer = () => (
           <a href="/koleksiyon">KOLEKSİYON</a>
           <a href="/tasarimcilar">TASARIMCILAR</a>
           <a href="#">VİZYON-MİSYON</a>
-          <a href="#">İLETİŞİM</a>
+          <a href="/contact">İLETİŞİM</a>
         </div>
         <div className="footer-social-title">BİZİ TAKİP EDİN</div>
         <div className="footer-social">
