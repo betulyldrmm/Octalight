@@ -8,15 +8,11 @@ const Contact = () => {
 
   return (
     <div className="contact-pro-bg">
-      {/* Başlık */}
       <div className="contact-pro-hero">
         <span className="contact-title-accent"></span>
         <h1 className="contact-pro-title">Contact</h1>
       </div>
-
-      {/* Form + Harita Yanyana */}
       <div className="contact-row-main">
-        {/* Sol: Form */}
         <div className="contact-pro-card">
           <form className="contact-pro-form">
             <div className="contact-pro-form-row">
@@ -70,8 +66,7 @@ const Contact = () => {
             </button>
           </form>
         </div>
-        {/* Sağ: Harita */}
-        <div className="contact-pro-map contact-pro-map-side">
+        <div className="contact-pro-map-side">
           <iframe
             title="Office Map"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24408.6784378124!2d32.847793955298225!3d39.90495630265466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d34f32d181a8ed%3A0xd91ce28c9789e46c!2zS3XFn2x1IFBhcmsgLSDDnG5jZWxpIE1lcmtlemk!5e0!3m2!1str!2str!4v1721296830190!5m2!1str!2str"
@@ -84,8 +79,7 @@ const Contact = () => {
         </div>
       </div>
 
-      {/* Alt: 3 iletişim kutusu */}
-      <div className="contact-pro-findus-row contact-pro-findus-row-bottom">
+      <div className="contact-pro-findus-row">
         <div className="contact-pro-findus-box">
           <FaPhoneAlt className="findus-icon" />
           <div className="findus-title">Phone</div>
@@ -102,7 +96,8 @@ const Contact = () => {
           <div className="findus-desc">Ankara, Çankaya</div>
         </div>
       </div>
-      <div className="footer-gap"></div>
+      {/* ALTTA RENKLİ BOŞLUK */}
+      <div className="findus-gap-bg"></div>
     </div>
   );
 };
