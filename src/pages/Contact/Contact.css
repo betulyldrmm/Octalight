@@ -1,10 +1,10 @@
 :root {
-  --pro-bg: #dad9d4;
+  --pro-bg: #898989;
   --pro-white: #fcfcfc;
   --pro-grey: #898989;
-  --pro-dark: #232323;
+  --pro-dark: #282828;
   --pro-shadow: 0 12px 48px 0 rgba(30,41,59,0.10);
-  --pro-radius: 16px;
+  --pro-radius: 6px;
 }
 
 body, .contact-pro-bg {
@@ -20,29 +20,35 @@ body, .contact-pro-bg {
   text-align: left;
 }
 .contact-title-accent {
-  display: block;
+display: block;
   width: 44px; height: 5px;
-  background: var(--pro-dark);
+  background: black;
   border-radius: 2px;
   margin-bottom: 8px;
+  position: relative;
+  left: -2cm;            /* Sola kaydırma */
+
 }
+/* Sayfa Başlığı */
 .contact-pro-title {
   font-size: 2.6rem;
   font-weight: 800;
-  color: var(--pro-dark);
+  color: black;
   margin-bottom: 10px;
   letter-spacing: 0.5px;
+  position: relative;
+  left: -2cm;            /* İsteğe bağlı: sola kaydırma */
 }
 
 /* YANYANA FORM + HARİTA DİZİLİMİ */
 .contact-row-main {
-  width: 100%;
   max-width: 1200px;
-  margin: 0 auto 38px auto;
+  margin: 0 auto 38px auto;    /* Ortala, altta boşluk bırak */
   display: flex;
-  gap: 32px;
+  gap: 38px;                   /* Kartlar arası boşluk */
   align-items: stretch;
   justify-content: center;
+  width: 100%;
 }
 .contact-pro-card {
   background: var(--pro-white);
@@ -70,13 +76,13 @@ body, .contact-pro-bg {
 .contact-pro-form-row textarea {
   width: 100%;
   border-radius: 13px;
-  background: #fafbfa;
-  border: 1.3px solid #e7e7e7;
+  background: #f9f8f8;
+  border: 1.3px solid #e7e7e7;      
   font-size: 16px;
   padding: 18px 16px;
   color: #232323;
   outline: none;
-  transition: border 0.15s, box-shadow 0.15s;
+ transition: border 0.15s, box-shadow 0.15s;
 }
 .contact-pro-form-row input:focus,
 .contact-pro-form-row select:focus,
@@ -149,45 +155,47 @@ body, .contact-pro-bg {
   min-height: 430px;
 }
 
-/* Alttaki iletişim kutuları */
 .contact-pro-findus-row {
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto 32px auto;
+  margin: 0 auto 0 auto;
   display: flex;
-  gap: 20px;
+  gap: 40px;
   justify-content: center;
 }
 .contact-pro-findus-box {
-  background: #fcfcfc;
-  border-radius: 12px;
+  background: var(--pro-white);
+  border-radius: 6px;
   box-shadow: 0 2px 12px 0 rgba(30,41,59,0.06);
-  flex: 1 1 180px;
-  min-width: 150px;
-  max-width: 340px;
-  padding: 28px 18px 22px 18px;
+  flex: 1 1 380px;
+  height: 180px;
+  justify-content: center; 
+  min-width: 220px;
+  max-width: 295px;
+  padding: 19px 10px 10px 16px;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .findus-icon {
   color: var(--pro-grey);
-  font-size: 29px;
-  margin-bottom: 9px;
+  font-size: 28px;
+  margin-bottom: 7px;
 }
 .findus-title {
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 700;
   color: var(--pro-dark);
-  margin-bottom: 2.5px;
+  margin-bottom: 2px;
 }
 .findus-desc {
-  font-size: 15px;
-  color: #898989;
+  font-size: 18px;
+  color: var(--pro-grey);
 }
 
-/* Responsive (Mobil) */
+
 @media (max-width: 1024px) {
   .contact-row-main {
     flex-direction: column;
@@ -216,4 +224,16 @@ body, .contact-pro-bg {
   width: 100%;
   height: 60px;
   background: #dad9d4!important;
+}
+/* === ALTTAKİ KOYU RENKLİ BOŞLUK === */
+.findus-gap-bg {
+  width: 100vw;
+  height: 55px;
+  background: #898989;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
 }
