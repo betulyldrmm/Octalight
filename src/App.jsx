@@ -20,6 +20,7 @@ import ScrollToTop from './components/ScrollToTop';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Tasarimcilar from './pages/Tasarimcilar/Tasarimcilar';
+import VizyonMisyon from './pages/VizyonMisyon/VizyonMisyon';
 
 const App = () => {
   useEffect(() => {
@@ -85,12 +86,13 @@ const App = () => {
         <Route path="home" element={<Home />} />
         <Route path="/koleksiyon" element={<Koleksiyon />} />
         <Route path="/golden" element={<Golden />} />
-       <Route path="/nest" element={<Nest />} />
+        <Route path="/nest" element={<Nest />} />
         <Route path="/pearls" element={<Pearls />} />
         <Route path="/ironmite" element={<Ironmite />} />
         <Route path="/about" element={<About/>}/>
- <Route path='/tasarimcilar' element={<Tasarimcilar/>}/>
- <Route path='giris' element={<Giris/>}/>
+        <Route path='/tasarimcilar' element={<Tasarimcilar/>}/>
+         <Route path='giris' element={<Giris/>}/>
+         <Route path='/vizyonMisyon' element={<VizyonMisyon />} />
           </Routes>
         </main>
 

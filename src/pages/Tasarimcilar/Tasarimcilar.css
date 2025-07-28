@@ -9,18 +9,19 @@
 
 body {
   font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #636363;
+  background-color:#898989
+;
 }
 
 .tasarimcilar-section {
-  background-color: #585858;
+background: linear-gradient(135deg, #545454, #5d5d5d);
   color: #f5f5f5;
   padding: 60px 20px;
 }
 
 .hero-section {
   width: 100%;
-  height: 400px;
+  height: 500px;
   background-size: cover;
   background-position: center;
   position: relative;
@@ -81,7 +82,7 @@ body {
 .tek-kart-wrapper {
   max-width: 1800px;
   margin: 0 auto;
-  background-color: #5a5a5a;
+   background: linear-gradient(135deg, #545454, #5d5d5d);
   display: flex;
   flex-direction: row;
   border-radius: 16px;
@@ -160,7 +161,8 @@ body {
 }
 
 .skill-tag {
-  background-color: #444;
+  background-color: #898989
+;
   padding: 6px 12px;
   border-radius: 20px;
   font-size: 14px;

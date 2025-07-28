@@ -10,7 +10,7 @@ const designers = [
     name: 'Mehmet Demir',
     speciality: 'İç Mimar & Konsept Tasarımcı',
     image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
-    bio: ' Minimalizm ve fonksiyonelliği birleştiren yaratıcı bir profesyonel. 15 yıllık deneyimiyle modern yaşam alanları tasarlıyor. Minimalizm ve fonksiyonelliği birleştiren yaratıcı bir profesyonel. 15 yıllık deneyimiyle modern yaşam alanları tasarlıyor. Minimalizm ve fonksiyonelliği birleştiren yaratıcı bir profesyonel. 15 yıllık deneyimiyle modern yaşam alanları tasarlıyor.',
+    bio: '( Shahed Tabsho | Interior Architect & Lighting Designer Graduated with a Bachelor’s degree in Interior Architecture from Istanbul Technical University, Shahed is the founder and creative mind behind OctaLight, a lighting design brand based in France.Driven by a deep passion for lighting and storytelling through design, she creates unique and artistic lighting pieces that blend function with emotion. Each collection is crafted to evoke a feeling, tell a story, and bring quiet elegance into everyday spaces. )',
    
     experience: '15+ Yıl',
     projects: '200+',
@@ -36,20 +36,14 @@ const Tasarimcilar = () => {
     <>
       <Header />
 
-      <section className="hero-section" style={{ backgroundImage: `url(${heroImage})` }}>
-        <div className="hero-overlay">
-          <div className="hero-content">
-            <h1 className="hero-title">TASARIMCIMIZ</h1>
-            <p className="hero-subtitle">Yaşam Alanlarınızı Dönüştürüyoruz</p>
-          </div>
-          
-        </div>
+     
+      
         <div className="scroll-down-container" onClick={scrollToContent}>
           <div className="scroll-indicator">
             
           </div>
         </div>
-      </section>
+  
 
 
       <section className="tasarimcilar-section">

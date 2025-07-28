@@ -10,7 +10,7 @@ const Header = () => {
   const location = useLocation();
 
   // Transparan olması gereken sayfalar
-  const transparentRoutes = ['/', '/koleksiyon', '/golden', '/nest','/about',"/home","/tasarimcilar","/pearls","/ironmite","/giris"];
+  const transparentRoutes = ['/', '/koleksiyon', '/golden', '/nest','/about',"/home","/tasarimcilar","/pearls","/ironmite"];
   const isTransparentPage = transparentRoutes.includes(location.pathname);
 
   useEffect(() => {
@@ -55,7 +55,7 @@ const Header = () => {
             <li><a href="/about" className="nav-link">HAKKIMIZDA</a></li>
             <li><a href="/koleksiyon" className="nav-link">KOLEKSİYON</a></li>
             <li><a href="/tasarimcilar" className="nav-link">TASARIMCIMIZ</a></li>
-            <li><a href="#" className="nav-link">VİZYON-MİSYON</a></li>
+            <li><a href="/vizyonmisyon" className="nav-link">VİZYON-MİSYON</a></li>
             <li><a href="#" className="nav-link">İLETİŞİM</a></li>
           </ul>
         </nav>
@@ -114,8 +114,7 @@ const Header = () => {
     </svg>
   </button>
 
-  {/* Giriş Yap Butonu */}
-   <li><a href='/giris' className='nav-link'>GİRİŞ</a></li>
+  
 </div>
         </div>
       </div>

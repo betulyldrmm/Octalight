@@ -1,0 +1,397 @@
+.vizyon-misyon-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #808183 0%, #878889 100%);
+  padding: 120px 0 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-wrapper {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.text-content {
+  background: white;
+  padding: 80px;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.vizyon-section,
+.misyon-section {
+  margin-bottom: 60px;
+}
+
+.misyon-section {
+  margin-bottom: 0;
+}
+
+.vizyon-section h2,
+.misyon-section h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 40px;
+  position: relative;
+  display: inline-block;
+}
+
+.vizyon-section h2::after,
+.misyon-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #d4af37, #f1c40f);
+  border-radius: 2px;
+}
+
+.text-content p {
+  font-size: 1.3rem;
+  line-height: 2;
+  color: #34495e;
+  margin-bottom: 30px;
+  text-align: justify;
+  text-justify: inter-word;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+}
+
+.text-content p:last-child {
+  margin-bottom: 0;
+}
+
+.images-section {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container {
+  flex: 1;
+  max-width: 500px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-container:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+}
+
+.vizyon-image,
+.misyon-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.image-container:hover .vizyon-image,
+.image-container:hover .misyon-image {
+  transform: scale(1.05);
+}
+
+/* Responsive Tasarım */
+
+/* Large Desktop */
+@media (max-width: 1440px) {
+  .text-content {
+    padding: 70px;
+  }
+  
+  .vizyon-section h2,
+  .misyon-section h2 {
+    font-size: 2.8rem;
+  }
+  
+  .text-content p {
+    font-size: 1.2rem;
+  }
+}
+
+/* Desktop */
+@media (max-width: 1280px) {
+  .content-wrapper {
+    padding: 0 30px;
+  }
+  
+  .text-content {
+    padding: 60px;
+  }
+  
+  .vizyon-section h2,
+  .misyon-section h2 {
+    font-size: 2.5rem;
+  }
+  
+  .text-content p {
+    font-size: 1.1rem;
+  }
+  
+  .vizyon-image,
+  .misyon-image {
+    height: 350px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .vizyon-misyon-container {
+    padding: 100px 0 40px;
+  }
+  
+  .text-content {
+    padding: 50px;
+  }
+  
+  .vizyon-section h2,
+  .misyon-section h2 {
+    font-size: 2.2rem;
+  }
+  
+  .text-content p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+  
+  .images-section {
+    gap: 30px;
+  }
+  
+  .vizyon-image,
+  .misyon-image {
+    height: 300px;
+  }
+}
+
+/* Small Tablet */
+@media (max-width: 900px) {
+  .content-wrapper {
+    padding: 0 20px;
+  }
+  
+  .text-content {
+    padding: 40px;
+  }
+  
+  .vizyon-section h2,
+  .misyon-section h2 {
+    font-size: 2rem;
+  }
+  
+  .images-section {
+    gap: 25px;
+  }
+}
+
+/* Mobile Large */
+@media (max-width: 768px) {
+  .vizyon-misyon-container {
+    padding: 80px 0 30px;
+  }
+  
+  .content-wrapper {
+    padding: 0 15px;
+  }
+  
+  .text-content {
+    padding: 30px;
+  }
+  
+  .vizyon-section h2,
+  .misyon-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+  
+  .text-content p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    text-align: left;
+  }
+  
+  .vizyon-section,
+  .misyon-section {
+    margin-bottom: 40px;
+  }
+  
+  .images-section {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .image-container {
+    max-width: 100%;
+  }
+  
+  .vizyon-image,
+  .misyon-image {
+    height: 250px;
+  }
+}
+
+/* Mobile Medium */
+@media (max-width: 640px) {
+  .text-content {
+    padding: 25px;
+    margin-bottom: 40px;
+  }
+  
+  .vizyon-section h2,
+  .misyon-section h2 {
+    font-size: 1.6rem;
+  }
+  
+  .text-content p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  
+  .vizyon-image,
+  .misyon-image {
+    height: 220px;
+  }
+}
+
+/* Mobile Small */
+@media (max-width: 480px) {
+  .vizyon-misyon-container {
+    padding: 70px 0 20px;
+  }
+  
+  .content-wrapper {
+    padding: 0 10px;
+  }
+  
+  .text-content {
+    padding: 20px;
+    border-radius: 15px;
+  }
+  
+  .vizyon-section h2,
+  .misyon-section h2 {
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+  }
+  
+  .vizyon-section h2::after,
+  .misyon-section h2::after {
+    width: 60px;
+    height: 3px;
+  }
+  
+  .text-content p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  .vizyon-section,
+  .misyon-section {
+    margin-bottom: 30px;
+  }
+  
+  .images-section {
+    gap: 20px;
+  }
+  
+  .vizyon-image,
+  .misyon-image {
+    height: 200px;
+  }
+}
+
+/* Mobile Extra Small */
+@media (max-width: 360px) {
+  .text-content {
+    padding: 15px;
+  }
+  
+  .vizyon-section h2,
+  .misyon-section h2 {
+    font-size: 1.2rem;
+  }
+  
+  .text-content p {
+    font-size: 0.85rem;
+  }
+  
+  .vizyon-image,
+  .misyon-image {
+    height: 180px;
+  }
+}
+
+/* Landscape Mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+  .vizyon-misyon-container {
+    padding: 60px 0 20px;
+  }
+  
+  .text-content {
+    padding: 20px;
+  }
+  
+  .vizyon-section h2,
+  .misyon-section h2 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+  
+  .text-content p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 15px;
+  }
+  
+  .vizyon-section,
+  .misyon-section {
+    margin-bottom: 20px;
+  }
+  
+  .images-section {
+    flex-direction: row;
+    gap: 15px;
+  }
+  
+  .vizyon-image,
+  .misyon-image {
+    height: 150px;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .vizyon-misyon-container {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
+  }
+  
+  .text-content {
+    background: #2c2c2c;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  }
+  
+  .vizyon-section h2,
+  .misyon-section h2 {
+    color: #ffffff;
+  }
+  
+  .text-content p {
+    color: #e0e0e0;
+  }
+}
