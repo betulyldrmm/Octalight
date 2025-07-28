@@ -1,0 +1,239 @@
+:root {
+  --pro-bg: #898989;
+  --pro-white: #fcfcfc;
+  --pro-grey: #898989;
+  --pro-dark: #282828;
+  --pro-shadow: 0 12px 48px 0 rgba(30,41,59,0.10);
+  --pro-radius: 6px;
+}
+
+body, .contact-pro-bg {
+  background: var(--pro-bg) !important;
+  min-height: 100vh;
+}
+
+.contact-pro-hero {
+  width: 100%;
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 70px 0 22px 0;
+  text-align: left;
+}
+.contact-title-accent {
+display: block;
+  width: 44px; height: 5px;
+  background: black;
+  border-radius: 2px;
+  margin-bottom: 8px;
+  position: relative;
+  left: -2cm;            /* Sola kaydırma */
+
+}
+/* Sayfa Başlığı */
+.contact-pro-title {
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: black;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+  position: relative;
+  left: -2cm;            /* İsteğe bağlı: sola kaydırma */
+}
+
+/* YANYANA FORM + HARİTA DİZİLİMİ */
+.contact-row-main {
+  max-width: 1200px;
+  margin: 0 auto 38px auto;    /* Ortala, altta boşluk bırak */
+  display: flex;
+  gap: 38px;                   /* Kartlar arası boşluk */
+  align-items: stretch;
+  justify-content: center;
+  width: 100%;
+}
+.contact-pro-card {
+  background: var(--pro-white);
+  border-radius: var(--pro-radius);
+  box-shadow: 0 8px 40px 0 rgba(30,41,59,0.13);
+  padding: 38px 36px 30px 36px;
+  flex: 1 1 380px;
+  min-width: 340px;
+  max-width: 460px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-pro-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.contact-pro-form-row {
+  display: block;
+  margin-bottom: 22px;
+}
+.contact-pro-form-row input,
+.contact-pro-form-row select,
+.contact-pro-form-row textarea {
+  width: 100%;
+  border-radius: 13px;
+  background: #f9f8f8;
+  border: 1.3px solid #e7e7e7;      
+  font-size: 16px;
+  padding: 18px 16px;
+  color: #232323;
+  outline: none;
+ transition: border 0.15s, box-shadow 0.15s;
+}
+.contact-pro-form-row input:focus,
+.contact-pro-form-row select:focus,
+.contact-pro-form-row textarea:focus {
+  border: 1.3px solid var(--pro-grey);
+  box-shadow: 0 2px 10px rgba(35,35,35,0.07);
+}
+.contact-pro-form-row input:hover,
+.contact-pro-form-row select:hover,
+.contact-pro-form-row textarea:hover {
+  border: 1.3px solid #bdbdbd;
+}
+.contact-pro-form-row input::placeholder,
+.contact-pro-form-row textarea::placeholder {
+  color: #b4b4b4;
+  opacity: 1;
+  font-size: 15px;
+  letter-spacing: 0.3px;
+}
+.contact-pro-form-row select {
+  min-width: 140px;
+  appearance: none;
+  background: #fafbfa url("data:image/svg+xml;charset=UTF-8,<svg fill='black' height='13' viewBox='0 0 20 20' width='13' xmlns='http://www.w3.org/2000/svg'><path d='M7.293 8.293a1 1 0 011.414 0L10 9.586l1.293-1.293a1 1 0 111.414 1.414l-2 2a1 1 0 01-1.414 0l-2-2a1 1 0 010-1.414z'/></svg>") no-repeat right 0.9em center/1.4em 1.4em;
+  padding-right: 40px;
+}
+.contact-pro-form-row textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+.fade-in-country {
+  animation: fadeIn 0.29s cubic-bezier(.77,0,.18,1) both;
+}
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(14px);}
+  100% { opacity: 1; transform: none;}
+}
+.contact-pro-btn {
+  background: var(--pro-dark);
+  color: #fff;
+  font-size: 20px;
+  font-weight: 800;
+  border: none;
+  border-radius: 13px;
+  width: 100%;
+  padding: 18px 0;
+  margin-top: 8px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background 0.17s, transform 0.12s;
+  box-shadow: 0 3px 14px rgba(35,35,35,0.06);
+}
+.contact-pro-btn:hover {
+  background: var(--pro-grey);
+  color: #fff;
+  transform: scale(1.016);
+}
+
+/* Sağdaki HARİTA */
+.contact-pro-map-side {
+  flex: 1 1 340px;
+  max-width: 480px;
+  min-width: 320px;
+  background: #f8f8f8;
+  border-radius: var(--pro-radius);
+  box-shadow: 0 6px 32px rgba(35,35,35,0.09);
+  border: 1.3px solid #ededed;
+  overflow: hidden;
+  display: flex;
+  align-items: stretch;
+  min-height: 430px;
+}
+
+.contact-pro-findus-row {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 0 auto;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+.contact-pro-findus-box {
+  background: var(--pro-white);
+  border-radius: 6px;
+  box-shadow: 0 2px 12px 0 rgba(30,41,59,0.06);
+  flex: 1 1 380px;
+  height: 180px;
+  justify-content: center; 
+  min-width: 220px;
+  max-width: 295px;
+  padding: 19px 10px 10px 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.findus-icon {
+  color: var(--pro-grey);
+  font-size: 28px;
+  margin-bottom: 7px;
+}
+.findus-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--pro-dark);
+  margin-bottom: 2px;
+}
+.findus-desc {
+  font-size: 18px;
+  color: var(--pro-grey);
+}
+
+
+@media (max-width: 1024px) {
+  .contact-row-main {
+    flex-direction: column;
+    gap: 32px;
+    max-width: 97vw;
+  }
+  .contact-pro-map-side, .contact-pro-card {
+    max-width: 100%;
+    min-width: 0;
+  }
+}
+@media (max-width: 720px) {
+  .contact-pro-hero { padding: 38px 0 14px 0; }
+  .contact-pro-card { padding: 14px 2vw 8px 2vw; }
+  .contact-row-main { gap: 18px; }
+  .contact-pro-findus-row { flex-direction: column; gap: 12px; }
+}
+
+/* Sayfa başında header varsa, alta boşluk bırakır */
+.contact-pro-bg {
+  margin-top: 160px;
+}
+
+/* Footer ile içerik arasına boşluk bırakır */
+.footer-gap {
+  width: 100%;
+  height: 60px;
+  background: #dad9d4!important;
+}
+/* === ALTTAKİ KOYU RENKLİ BOŞLUK === */
+.findus-gap-bg {
+  width: 100vw;
+  height: 55px;
+  background: #898989;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}

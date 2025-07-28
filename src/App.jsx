@@ -3,24 +3,25 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Home from './pages/Home';
 import Koleksiyon from './pages/Koleksiyon/Koleksiyon';
+import Tasarimcilar from './pages/Tasarimcilar/Tasarimcilar'; 
 import Golden from './pages/Golden/Golden';
 import Nest from './pages/Nest/Nest';
 import Pearls from './pages/Pearls/Pearls';
 import Ironmite from './pages/Ironmite/Ironmite';
-
 import Footer from './components/Footer';
-import DonmeDolapKarti from './components/DonmeDolapKarti';
 import CookieBanner from './components/CookieBanner';
 import Header from './components/Header';
 import About from './pages/About/About';
 import Donme from './components/Donme';
 import Giris from './pages/Giris/Giris';
+import Contact from './pages/Contact/Contact';
 import ScrollToTop from './components/ScrollToTop';
-
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Tasarimcilar from './pages/Tasarimcilar/Tasarimcilar';
 import VizyonMisyon from './pages/VizyonMisyon/VizyonMisyon';
+
+// DonmeDolapKarti importu yok, ekledim (doğru yolu kontrol et)
+import DonmeDolapKarti from './components/DonmeDolapKarti'; 
 
 const App = () => {
   useEffect(() => {
@@ -44,11 +45,10 @@ const App = () => {
           flexDirection: 'column',
         }}
       >
+        <Header />
         <main style={{ flex: 1 }}>
-          <Header />
-
           <Routes>
-            {/* Anasayfa */}
+            {/* Anasayfa özel */}
             <Route
               path="/"
               element={
@@ -77,25 +77,21 @@ const App = () => {
               }
             />
 
-       
-           
-
-           
-        <Route path="/hakkimizda" element={<About />} />
-         <Route path="/" element={<Home />} />
-        <Route path="home" element={<Home />} />
-        <Route path="/koleksiyon" element={<Koleksiyon />} />
-        <Route path="/golden" element={<Golden />} />
-        <Route path="/nest" element={<Nest />} />
-        <Route path="/pearls" element={<Pearls />} />
-        <Route path="/ironmite" element={<Ironmite />} />
-        <Route path="/about" element={<About/>}/>
-        <Route path='/tasarimcilar' element={<Tasarimcilar/>}/>
-         <Route path='giris' element={<Giris/>}/>
-         <Route path='/vizyonMisyon' element={<VizyonMisyon />} />
+            {/* Diğer rotalar */}
+            <Route path="/home" element={<Home />} />
+            <Route path="/hakkimizda" element={<About />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/tasarimcilar" element={<Tasarimcilar />} />
+            <Route path="/koleksiyon" element={<Koleksiyon />} />
+            <Route path="/golden" element={<Golden />} />
+            <Route path="/nest" element={<Nest />} />
+            <Route path="/pearls" element={<Pearls />} />
+            <Route path="/ironmite" element={<Ironmite />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/giris" element={<Giris />} />
+            <Route path="/vizyonMisyon" element={<VizyonMisyon />} />
           </Routes>
         </main>
-
         <Footer />
         <CookieBanner />
       </div>
