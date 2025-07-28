@@ -1,7 +1,8 @@
 import React from 'react';
 import './VizyonMisyon.css';
 import Header from '../../components/Header';
-import lamba from '../../assets/1.jpg'
+import lamba from '../../assets/1.jpg';
+
 const VizyonMisyon = () => {
   return (
     <>
@@ -48,20 +49,20 @@ const VizyonMisyon = () => {
                 standartlarını yakalayarak sektörde güvenilir bir partner olmayı sürdürüyoruz.
               </p>
             </section>
-         
-<br></br><br></br>
-          <div className="images-section">
-            <div className="image-container">
-              <img src={lamba} alt="Vizyon görüntüsü" className="vizyon-image" />
-            </div>
-            <div className="image-container">
-              <img src={lamba} alt="Misyon görüntüsü" className="misyon-image" />
-            </div>
-             </div>
+
+            <div className="section-divider"></div>
+
+            <div className="images-section">
+              <div className="image-container">
+                <img src={lamba} alt="Vizyon görüntüsü" className="vizyon-image" />
+              </div>
+              <div className="image-container">
+                <img src={lamba} alt="Misyon görüntüsü" className="misyon-image" />
+              </div>
             </div>
           </div>
         </div>
-     
+      </div>
     </>
   );
 };
