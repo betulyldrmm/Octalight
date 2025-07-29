@@ -13,7 +13,7 @@ import CookieBanner from './components/CookieBanner';
 import Header from './components/Header';
 import About from './pages/About/About';
 import Donme from './components/Donme';
-import Giris from './pages/Giris/Giris';
+
 import Contact from './pages/Contact/Contact';
 import ScrollToTop from './components/ScrollToTop';
 import AOS from 'aos';
@@ -88,7 +88,7 @@ const App = () => {
             <Route path="/pearls" element={<Pearls />} />
             <Route path="/ironmite" element={<Ironmite />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/giris" element={<Giris />} />
+          
             <Route path="/vizyonMisyon" element={<VizyonMisyon />} />
           </Routes>
         </main>

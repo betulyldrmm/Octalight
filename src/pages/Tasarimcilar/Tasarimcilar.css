@@ -50,7 +50,7 @@ background: linear-gradient(135deg, #545454, #5d5d5d);
 }
 
 .hero-subtitle {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 300;
   color: #e0e0e0;
 }
@@ -217,12 +217,12 @@ background: linear-gradient(135deg, #545454, #5d5d5d);
 }
 
 .cta-content h2 {
-  font-size: 36px;
+  font-size: 42px;
   margin-bottom: 16px;
 }
 
 .cta-content p {
-  font-size: 18px;
+  font-size: 24px;
   margin-bottom: 24px;
 }
 

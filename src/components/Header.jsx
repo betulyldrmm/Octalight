@@ -9,7 +9,7 @@ const Header = () => {
   const [lastScrollY, setLastScrollY] = useState(0);
   const location = useLocation();
 
-  // Transparan olması gereken sayfalar
+
   const transparentRoutes = ['/', '/koleksiyon', '/golden', '/nest','/about',"/home","/tasarimcilar","/pearls","/ironmite"];
   const isTransparentPage = transparentRoutes.includes(location.pathname);
 
@@ -56,7 +56,7 @@ const Header = () => {
             <li><a href="/koleksiyon" className="nav-link">KOLEKSİYON</a></li>
             <li><a href="/tasarimcilar" className="nav-link">TASARIMCIMIZ</a></li>
             <li><a href="/vizyonmisyon" className="nav-link">VİZYON-MİSYON</a></li>
-            <li><a href="#" className="nav-link">İLETİŞİM</a></li>
+            <li><a href="/contact" className="nav-link">İLETİŞİM</a></li>
           </ul>
         </nav>
 

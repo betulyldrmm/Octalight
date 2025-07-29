@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Tasarimcilar.css';
 import Header from '../../components/Header';
-import heroImage from '../../assets/t.png';
+import heroImage from '../../assets/1.jpg';
 import Galeri from '../../components/Galeri';
 
 const designers = [
