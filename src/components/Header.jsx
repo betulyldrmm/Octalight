@@ -57,6 +57,7 @@ const Header = () => {
             <li><a href="/tasarimcilar" className="nav-link">TASARIMCIMIZ</a></li>
             <li><a href="/vizyonmisyon" className="nav-link">VİZYON-MİSYON</a></li>
             <li><a href="/contact" className="nav-link">İLETİŞİM</a></li>
+            <li><a href='/auth' className='nav-link'>Giriş</a></li>
           </ul>
         </nav>
 
@@ -113,6 +114,7 @@ const Header = () => {
       <circle cx="12" cy="7" r="4" stroke="currentColor" strokeWidth="2" />
     </svg>
   </button>
+  
 
   
 </div>

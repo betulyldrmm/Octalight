@@ -54,6 +54,7 @@ const Tasarimcilar = () => {
           </div>
           <div className="tasarimci-bilgi">
             <h3 className="isim">{selectedDesigner.name}</h3>
+            <div className='line'></div>
             <p className="pozisyon">{selectedDesigner.speciality}</p>
             <p className="aciklama">{selectedDesigner.bio}</p>
 

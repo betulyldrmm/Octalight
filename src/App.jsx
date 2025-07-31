@@ -13,6 +13,7 @@ import CookieBanner from './components/CookieBanner';
 import Header from './components/Header';
 import About from './pages/About/About';
 import Donme from './components/Donme';
+import Auth from './pages/Authh/Auth';
 
 import Contact from './pages/Contact/Contact';
 import ScrollToTop from './components/ScrollToTop';
@@ -90,6 +91,8 @@ const App = () => {
             <Route path="/contact" element={<Contact />} />
           
             <Route path="/vizyonMisyon" element={<VizyonMisyon />} />
+            <Route path='/auth' element={<Auth/>}/>
+           
           </Routes>
         </main>
         <Footer />
