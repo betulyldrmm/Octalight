@@ -80,7 +80,7 @@ const Home = () => {
         id="main-content"
         style={{
           backgroundColor: "#fcfcfc",
-          minHeight: "100vh",
+          minHeight: "50vh",
           width: "100%",
           paddingTop: "40px",
           display: "flex",
