@@ -1,64 +1,37 @@
+// src/pages/Auth.jsx
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Auth = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const navigate = useNavigate();
 
-  const handleLogin = async (e) => {
+  const handleLogin = (e) => {
     e.preventDefault();
-    
-    try {
-      const response = await fetch('http://localhost:3001/api/auth/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ username, password }),
-      });
-      
-      const data = await response.json();
-      
-      if (response.ok) {
-        localStorage.setItem('token', data.token);
-        setIsLoggedIn(true);
-        alert('Giriş başarılı!');
-      } else {
-        alert(data.error || 'Giriş başarısız');
-      }
-    } catch (error) {
-      console.error('Login error:', error);
-      alert('Bağlantı hatası');
+
+    if (username === 'admin' && password === 'admin123') {
+      localStorage.setItem('adminToken', 'true');
+      alert('Giriş başarılı!');
+      navigate('/admin-panel');
+    } else {
+      alert('Hatalı kullanıcı adı veya şifre');
     }
   };
 
-  if (isLoggedIn) {
-    return (
-      <div style={{ padding: '40px', textAlign: 'center' }}>
-        <h2>Hoş Geldiniz!</h2>
-        <p>Başarıyla giriş yaptınız.</p>
-        <button onClick={() => {
-          localStorage.removeItem('token');
-          setIsLoggedIn(false);
-        }}>
-          Çıkış Yap
-        </button>
-      </div>
-    );
-  }
-
   return (
-    <div style={{ 
-      padding: '40px', 
-      maxWidth: '400px', 
+    <div style={{
+      padding: '40px',
+      maxWidth: '400px',
       margin: '0 auto',
       backgroundColor: '#fff',
       color: '#000',
       borderRadius: '8px',
-      marginTop: '40px'
+      marginTop: '40px',
+      boxShadow: '0 0 20px rgba(0,0,0,0.1)'
     }}>
       <h2 style={{ textAlign: 'center', marginBottom: '30px' }}>Admin Girişi</h2>
-      
+
       <form onSubmit={handleLogin}>
         <div style={{ marginBottom: '20px' }}>
           <label style={{ display: 'block', marginBottom: '5px' }}>
@@ -77,7 +50,7 @@ const Auth = () => {
             required
           />
         </div>
-        
+
         <div style={{ marginBottom: '20px' }}>
           <label style={{ display: 'block', marginBottom: '5px' }}>
             Şifre:
@@ -95,7 +68,7 @@ const Auth = () => {
             required
           />
         </div>
-        
+
         <button
           type="submit"
           style={{
@@ -112,7 +85,7 @@ const Auth = () => {
           Giriş Yap
         </button>
       </form>
-      
+
       <p style={{ marginTop: '20px', textAlign: 'center', fontSize: '14px', color: '#666' }}>
         Test için: admin / admin123
       </p>
