@@ -3,26 +3,29 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Home from './pages/Home';
 import Koleksiyon from './pages/Koleksiyon/Koleksiyon';
-import Tasarimcilar from './pages/Tasarimcilar/Tasarimcilar'; 
+import Tasarimcilar from './pages/Tasarimcilar/Tasarimcilar';
 import Golden from './pages/Golden/Golden';
 import Nest from './pages/Nest/Nest';
 import Pearls from './pages/Pearls/Pearls';
 import Ironmite from './pages/Ironmite/Ironmite';
+import About from './pages/About/About';
+import Contact from './pages/Contact/Contact';
+import VizyonMisyon from './pages/VizyonMisyon/VizyonMisyon';
+import Auth from './pages/Authh/Auth';
+import UrunEkle from './pages/AdminPanel/UrunEkle';
+import KoleksiyonEkle from './pages/AdminPanel/KoleksiyonEkle';
+import DinamikKoleksiyon from './pages/Koleksiyon/DinamikKoleksiyon';
+
+import Header from './components/Header';
 import Footer from './components/Footer';
 import CookieBanner from './components/CookieBanner';
-import Header from './components/Header';
-import About from './pages/About/About';
-import Donme from './components/Donme';
-import Auth from './pages/Authh/Auth';
-
-import Contact from './pages/Contact/Contact';
 import ScrollToTop from './components/ScrollToTop';
+import DonmeDolapKarti from './components/DonmeDolapKarti';
+import AdminPanel from './pages/AdminPanel/AdminPanel';
+
+
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import VizyonMisyon from './pages/VizyonMisyon/VizyonMisyon';
-
-// DonmeDolapKarti importu yok, ekledim (doğru yolu kontrol et)
-import DonmeDolapKarti from './components/DonmeDolapKarti'; 
 
 const App = () => {
   useEffect(() => {
@@ -49,7 +52,6 @@ const App = () => {
         <Header />
         <main style={{ flex: 1 }}>
           <Routes>
-            {/* Anasayfa özel */}
             <Route
               path="/"
               element={
@@ -77,8 +79,6 @@ const App = () => {
                 </>
               }
             />
-
-            {/* Diğer rotalar */}
             <Route path="/home" element={<Home />} />
             <Route path="/hakkimizda" element={<About />} />
             <Route path="/about" element={<About />} />
@@ -89,10 +89,17 @@ const App = () => {
             <Route path="/pearls" element={<Pearls />} />
             <Route path="/ironmite" element={<Ironmite />} />
             <Route path="/contact" element={<Contact />} />
-          
             <Route path="/vizyonMisyon" element={<VizyonMisyon />} />
-            <Route path='/auth' element={<Auth/>}/>
-           
+
+            {/* Admin giriş ve içerik */}
+            <Route path="/auth" element={<Auth />} />
+            <Route path="/admin-panel" element={<AdminPanel />} />
+
+            <Route path="/admin/urun-ekle" element={<UrunEkle />} />
+            <Route path="/admin/koleksiyon-ekle" element={<KoleksiyonEkle />} />
+
+            {/* Dinamik koleksiyon */}
+            <Route path="/:slug" element={<DinamikKoleksiyon />} />
           </Routes>
         </main>
         <Footer />
