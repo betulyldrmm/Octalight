@@ -5,7 +5,6 @@ const UrunEkle = () => {
     isim: '',
     aciklama: '',
     koleksiyon_slug: '',
-    koleksiyon_id: '',
   });
 
   const [gorsel, setGorsel] = useState(null);
@@ -14,7 +13,16 @@ const UrunEkle = () => {
   useEffect(() => {
     fetch('http://localhost:3001/api/koleksiyonlar')
       .then(res => res.json())
-      .then(data => setKoleksiyonlar(data))
+      .then(data => {
+        const sabitKoleksiyonlar = [
+          { slug: 'golden', isim: 'Golden Hour' },
+          { slug: 'nest', isim: 'Nest' },
+          { slug: 'pearls', isim: 'Pearls' },
+          { slug: 'ironmite', isim: 'Ironmite' },
+        ];
+        const birlesmis = [...sabitKoleksiyonlar, ...data];
+        setKoleksiyonlar(birlesmis);
+      })
       .catch(err => console.error('Koleksiyonlar alınamadı:', err));
   }, []);
 
@@ -33,7 +41,6 @@ const UrunEkle = () => {
     formData.append('isim', form.isim);
     formData.append('aciklama', form.aciklama);
     formData.append('koleksiyon_slug', form.koleksiyon_slug);
-    formData.append('koleksiyon_id', form.koleksiyon_id);
     if (gorsel) {
       formData.append('gorsel', gorsel);
     }
@@ -48,7 +55,7 @@ const UrunEkle = () => {
 
       if (response.ok) {
         alert('Ürün başarıyla eklendi!');
-        setForm({ isim: '', aciklama: '', koleksiyon_slug: '', koleksiyon_id: '' });
+        setForm({ isim: '', aciklama: '', koleksiyon_slug: '' });
         setGorsel(null);
       } else {
         alert(data.error || 'Ürün eklenemedi!');
@@ -87,26 +94,17 @@ const UrunEkle = () => {
           style={inputStyle}
           required
         />
-        <input
-          type="text"
-          name="koleksiyon_slug"
-          placeholder="Koleksiyon Slug (örn: golden)"
-          value={form.koleksiyon_slug}
-          onChange={handleChange}
-          style={inputStyle}
-          required
-        />
 
         <select
-          name="koleksiyon_id"
-          value={form.koleksiyon_id}
+          name="koleksiyon_slug"
+          value={form.koleksiyon_slug}
           onChange={handleChange}
           style={inputStyle}
           required
         >
           <option value="">Koleksiyon Seç</option>
-          {koleksiyonlar.map((k) => (
-            <option key={k.id} value={k.id}>
+          {koleksiyonlar.map((k, index) => (
+            <option key={index} value={k.slug}>
               {k.isim}
             </option>
           ))}
