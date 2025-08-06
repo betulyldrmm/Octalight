@@ -33,28 +33,43 @@ const upload = multer({ storage });
 
 // ✅ 1. Koleksiyonları getir (Dropdown için)
 app.get('/api/koleksiyonlar', (req, res) => {
-  const sql = "SELECT id, isim FROM koleksiyonlar";
+  const sql = "SELECT id, isim, slug FROM koleksiyonlar";
   db.query(sql, (err, results) => {
     if (err) return res.status(500).json({ error: "Veritabanı hatası", details: err });
     res.json(results);
   });
 });
 
-// ✅ 2. Ürün ekle (resim yükleyerek)
+
+// ✅ 2. Ürün ekle (koleksiyon_id varsa kullanır, yoksa sadece slug ile ekler)
 app.post('/api/urunler', upload.single('gorsel'), (req, res) => {
   const { koleksiyon_id, isim, aciklama, koleksiyon_slug } = req.body;
   const gorsel = req.file ? req.file.filename : null;
 
-  const sql = `INSERT INTO urunler (koleksiyon_id, isim, aciklama, resim_url, koleksiyon_slug)
-               VALUES (?, ?, ?, ?, ?)`;
+  const koleksiyonIdToInsert = koleksiyon_id && koleksiyon_id !== '' ? koleksiyon_id : null;
 
-  db.query(sql, [koleksiyon_id, isim, aciklama, gorsel, koleksiyon_slug], (err, result) => {
-    if (err) return res.status(500).json({ error: "Ürün ekleme hatası", details: err });
+  const sql = koleksiyonIdToInsert
+    ? `INSERT INTO urunler (koleksiyon_id, isim, aciklama, resim_url, koleksiyon_slug)
+       VALUES (?, ?, ?, ?, ?)`
+    : `INSERT INTO urunler (isim, aciklama, resim_url, koleksiyon_slug)
+       VALUES (?, ?, ?, ?)`;
+
+  const values = koleksiyonIdToInsert
+    ? [koleksiyonIdToInsert, isim, aciklama, gorsel, koleksiyon_slug]
+    : [isim, aciklama, gorsel, koleksiyon_slug];
+
+  db.query(sql, values, (err, result) => {
+    if (err) {
+      console.error("Ürün ekleme hatası:", err);
+      return res.status(500).json({ error: "Ürün ekleme hatası", details: err });
+    }
+
     res.json({ success: true, id: result.insertId });
   });
 });
 
-// ✅ 3. Koleksiyon ekle (görselle)
+
+// ✅ 3. Koleksiyon ekle (görselle birlikte)
 app.post('/api/koleksiyonlar', upload.single('gorsel'), (req, res) => {
   const { isim, aciklama, slug } = req.body;
   const gorsel = req.file ? req.file.filename : null;
@@ -67,7 +82,9 @@ app.post('/api/koleksiyonlar', upload.single('gorsel'), (req, res) => {
     res.json({ success: true, id: result.insertId });
   });
 });
-// ✅ Ürünleri listele (koleksiyonla birlikte)
+
+
+// ✅ 4. Ürünleri listele
 app.get('/api/urunler', (req, res) => {
   const sql = `
     SELECT u.*, k.isim as koleksiyon_adi 
