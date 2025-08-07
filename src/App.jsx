@@ -14,14 +14,13 @@ import VizyonMisyon from './pages/VizyonMisyon/VizyonMisyon';
 import Auth from './pages/Authh/Auth';
 import UrunEkle from './pages/AdminPanel/UrunEkle';
 import KoleksiyonEkle from './pages/AdminPanel/KoleksiyonEkle';
-import DinamikKoleksiyon from './pages/Koleksiyon/DinamikKoleksiyon';
+
 
 import Header from './components/Header';
 import Footer from './components/Footer';
 import CookieBanner from './components/CookieBanner';
 import ScrollToTop from './components/ScrollToTop';
-import AdminPanel from './pages/AdminPanel/AdminPanel';
-
+import AdminPanel from './pages/AdminPanel/AdminPanel'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -67,12 +66,12 @@ const App = () => {
 
             {/* Admin giriş ve içerik */}
             <Route path="/auth" element={<Auth />} />
-            <Route path="/admin-panel" element={<AdminPanel />} />
+             <Route path="/admin-panel" element={<AdminPanel />} />
             <Route path="/admin/urun-ekle" element={<UrunEkle />} />
-            <Route path="/admin/koleksiyon-ekle" element={<KoleksiyonEkle />} />
+            <Route path="/admin/KoleksiyonEkle" element={<KoleksiyonEkle />} />
 
             {/* Dinamik koleksiyon */}
-            <Route path="/koleksiyon/:slug" element={<DinamikKoleksiyon />} />
+          
           </Routes>
         </main>
         <Footer />
