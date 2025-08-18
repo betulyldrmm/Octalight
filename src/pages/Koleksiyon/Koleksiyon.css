@@ -118,7 +118,7 @@ body {
 .koleksiyon-container {
   padding-top: 120px;
   padding-bottom: 200px;
-  padding-left: 40px;
+  padding-left: 80px;
   padding-right: 40px;
   background-color: #232323;
   min-height: 100vh;
@@ -174,7 +174,7 @@ body {
 }
 
 .kategori-baslik-left {
-  font-size: 5rem;
+  font-size: 3.2rem;
   font-weight: 700;
   color: #FCFCFC;
   margin: 0;
@@ -186,20 +186,20 @@ body {
 
 .kategori-description {
   color: #E0E0E0;
-  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  font-size: clamp(1rem, 2vw, 1.5rem);
   font-family: 'Poppins', 'Inter', sans-serif;
-  font-weight: 400;
+  font-weight: 350;
   line-height: 1.6;
-  max-width: 500px;
+  max-width: 400px;
 }
 
 .item-link-left {
   display: inline-block;
-  padding: 20px 40px;
+  padding: 20px 30px;
   background: transparent;
   color: #FCFCFC;
-  font-size: 1.3rem;
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: 500;
   border-radius: 8px;
   text-decoration: none;
   transition: all 0.3s ease;
@@ -237,7 +237,7 @@ body {
 .item-image-container-right {
   flex: 1;
   position: relative;
-  height: 750px;
+  height: 550px;
   overflow: hidden;
   border-radius: 16px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);

@@ -35,7 +35,7 @@
 
 .vizyon-section h2,
 .misyon-section h2 {
-  font-size: 3rem;
+  font-size: 2.2rem;
   font-weight: 700;
   color: #2c3e50;
   margin-bottom: 40px;
@@ -57,9 +57,9 @@
 }
 
 .text-content p {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   line-height: 2;
-  color: #34495e;
+  color: #0d151d;
   margin-bottom: 30px;
   text-align: justify;
   text-justify: inter-word;
@@ -80,16 +80,17 @@
 
 .image-container {
   flex: 1;
-  max-width: 500px;
+  max-width: 400px;
   position: relative;
   overflow: hidden;
   border-radius: 15px;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 20px;
 }
 
 .image-container:hover {
-  transform: translateY(-10px);
+
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
 }
 
@@ -101,10 +102,7 @@
   transition: transform 0.3s ease;
 }
 
-.image-container:hover .vizyon-image,
-.image-container:hover .misyon-image {
-  transform: scale(1.05);
-}
+
 
 /* Responsive Tasarım */
 

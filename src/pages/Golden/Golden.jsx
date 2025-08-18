@@ -8,7 +8,7 @@ import { FaHome, FaList, FaGem } from 'react-icons/fa';
 import Header from '../../components/Header';
 import ScrollToTop from '../../components/ScrollToTop';
 
-import heroImage from '../../assets/hero.jpg';
+import heroImage from '../../assets/8.jpg';
 
 
 import Donme from '../../components/Donme';
@@ -57,20 +57,20 @@ const Golden = () => {
       <Header />
       <ScrollToTop />
 
-      <div className="page-container">
+      <div className="page-containere">
         {/* Sidebar */}
-        <div className="sidebarr">
-          <Link to="/" className="sidebarr-link">
-            <FaHome className="sidebarr-icon" />
-            <span className="sidebarr-text">Home</span>
+        <div className="sidebarrr">
+          <Link to="/" className="sidebarrr-link">
+            <FaHome className="sidebarrr-icon" />
+            <span className="sidebarrr-text">Home</span>
           </Link>
-          <Link to="/koleksiyon" className="sidebarr-link">
-            <FaList className="sidebarr-icon" />
-            <span className="sidebarr-text">Collection</span>
+          <Link to="/koleksiyon" className="sidebarrr-link">
+            <FaList className="sidebarrr-icon" />
+            <span className="sidebarrr-text">Collection</span>
           </Link>
-          <div className="sidebarr-link active">
-            <FaGem className="sidebarr-icon" />
-            <span className="sidebarr-text">GOLDEN HOUR</span>
+          <div className="sidebarrr-link active">
+            <FaGem className="sidebarrr-icon" />
+            <span className="sidebarrr-text">GOLDEN HOUR</span>
           </div>
         </div>
 <div className="scroll-down-container" onClick={scrollToContent}>
@@ -82,17 +82,17 @@ const Golden = () => {
         </div>
     
         {/* Hero Section */}
-        <div className="hero-section">
-          <div className="hero-image-container">
+        <div className="hero-sectionn">
+          <div className="hero-image-containerr">
             <img
               src={heroImage}
               alt="Golden Hour Hero"
-              className="hero-image"
+              className="heroo-image"
               loading="lazy"
             />
             <div className="hero-overlayy">
               <div className="hero-conten" data-aos="fade-up">
-                <h1 className="hero-titl">GOLDEN HOUR</h1>
+                <h1 className="hero-title">GOLDEN HOUR</h1>
                 <p className="hero-subtitle">
                   Modern and elegant lighting for your dreams
                 </p>

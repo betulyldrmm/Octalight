@@ -14,7 +14,7 @@ body, .contact-pro-bg {
 
 .contact-pro-hero {
   width: 100%;
-  max-width: 780px;
+  max-width: 980px;
   margin: 0 auto;
   padding: 70px 0 22px 0;
   text-align: left;
@@ -42,7 +42,7 @@ display: block;
 
 /* YANYANA FORM + HARİTA DİZİLİMİ */
 .contact-row-main {
-  max-width: 1200px;
+  max-width: 1500px;
   margin: 0 auto 38px auto;    /* Ortala, altta boşluk bırak */
   display: flex;
   gap: 38px;                   /* Kartlar arası boşluk */

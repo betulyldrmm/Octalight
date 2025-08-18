@@ -8,7 +8,7 @@ import { FaHome, FaList, FaGem } from 'react-icons/fa';
 import Header from '../../components/Header';
 import ScrollToTop from '../../components/ScrollToTop';
 
-import heroImage from '../../assets/hero.jpg';
+import heroImage from '../../assets/10.jpg';
 
 
 import Donme from '../../components/Donme';
@@ -56,16 +56,16 @@ const scrollToContent = () => {
       <ScrollToTop />
 
       <div className="page-container">
-        <div className="sidebar">
-          <Link to="/" className="sidebar-link">
+        <div className="sidebarrr">
+          <Link to="/" className="sidebarrr-link">
             <FaHome />
             <span>Home</span>
           </Link>
-          <Link to="/koleksiyon" className="sidebar-link">
+          <Link to="/koleksiyon" className="sidebarrr-link">
             <FaList />
             <span>Collection</span>
           </Link>
-          <div className="sidebar-link active">
+          <div className="sidebarrr-link active">
             <FaGem />
             <span>NEST</span>
           </div>
@@ -84,8 +84,8 @@ const scrollToContent = () => {
               alt="Hero"
               className="hero-image"
               loading="lazy"
-            />
-            <div className="hero-overlayy">
+            /><br></br><br></br>
+            <div className="hero-overlayy"><br></br><br></br><br></br><br></br><br></br>
               <div className="hero-content" data-aos="fade-up">
                 <h1 className="hero-title">NEST</h1>
                 <p className="hero-subtitle">Modern lighting beyond expectations</p>
@@ -94,9 +94,18 @@ const scrollToContent = () => {
           </div>
         </div>
 
-        <br /><br /><br />
-
         <Donme />
+<div className="collection-story">
+          <div className="story-content">
+            <h2 className="story-title" data-aos="fade-up">
+              NEST COLLECTION
+            </h2>
+            <p className="story-subtitle" data-aos="fade-up" data-aos-delay="200">
+              The perfect harmony of light and design
+            </p>
+          </div>
+          </div>
+       
 
         {/* contentDataa dizisini ResimKismi bileşenine prop olarak gönderiyoruz */}
         <ResimKismi2></ResimKismi2>

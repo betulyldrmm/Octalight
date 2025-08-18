@@ -2,10 +2,10 @@
 
 import React, { useRef, useEffect } from 'react';
 import './About.css';
-import backgroundImage from '../../assets/hakkinda2.jpg';
-import altGorsel from '../../assets/hakkinda2.jpg';
-import ucuncuGorsel from '../../assets/hakkinda3.jpg';
-import dorduncu from '../../assets/hakkinda4.jpg';
+import backgroundImage from '../../assets/12.jpg';
+import altGorsel from '../../assets/13.jpg';
+import ucuncuGorsel from '../../assets/14.jpg';
+import dorduncu from '../../assets/15.jpg';
 
 const Ok = () => (
   <svg width="48" height="48" viewBox="0 0 48 48" fill="none">

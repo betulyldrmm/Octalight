@@ -1,8 +1,8 @@
 import './ResimKismi.css';
 
-import lamp from "../assets/lamp.jpg";
-import resim from "../assets/1.jpg";
-import lamba from "../assets/2.jpg";
+import lamp from "../assets/33.jpg";
+import resim from "../assets/44.jpg";
+import lamba from "../assets/5.jpg";
 
 const contentData = [
   {

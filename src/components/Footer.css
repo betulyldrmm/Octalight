@@ -18,8 +18,8 @@
 }
 
 .footer-logo {
-  font-size: 38px;
-  font-weight: 900;
+  font-size: 35px;
+  font-weight: 700;
   letter-spacing: 1px;
   color: #fff;
   margin-bottom: 18px;
@@ -33,10 +33,9 @@
   gap: 22px;
 }
 
-.footer-social-title,
-.newsletter-title {
+.footer-social-title, .newsletter-title {
   color: #8c8e92;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
   margin-bottom: 7px;
   letter-spacing: 1px;
@@ -47,19 +46,20 @@
   gap: 18px;
   margin-bottom: 12px;
 }
+
 .footer-social a {
   color: #fff;
-  font-size: 22px;
+  font-size: 18px;
   opacity: 0.8;
-  transition: opacity 0.2s;
 }
+
 .footer-social a:hover {
   opacity: 1;
 }
 
 .footer-mail {
   color: #fff;
-  font-size: 16px;
+  font-size: 12px;
   opacity: 0.9;
   margin-top: 12px;
   letter-spacing: 0.5px;
@@ -73,27 +73,32 @@
   font-weight: 700;
   flex-wrap: wrap;
 }
+
 .footer-menu a {
   color: #fff;
   text-decoration: none;
   transition: opacity 0.2s;
   letter-spacing: 0.8px;
+  font-size: 14px;
 }
+
 .footer-menu a:hover {
   opacity: 0.75;
 }
 
 .footer-newsletter {
-  width: 410px;
+  width: 380px;
   max-width: 100%;
   margin-top: 8px;
 }
+
 .newsletter-title {
   margin-bottom: 10px;
 }
+
 .newsletter-form {
   display: flex;
-  width: 150%;
+  width: 130%;
 }
 
 .newsletter-form input[type="email"] {
@@ -103,20 +108,22 @@
   border: 1px solid #fff;
   background: transparent;
   color: #fff;
-  font-size: 17px;
+  font-size: 15px;
   border-right: none;
   outline: none;
   border-radius: 0;
   transition: background 0.2s;
 }
+
 .newsletter-form input::placeholder {
   color: #8c8e92;
   font-weight: 400;
 }
+
 .newsletter-form button {
   background: transparent;
   color: #fff;
-  font-weight: 900;
+  font-weight: 700;
   border: 1px solid #fff;
   border-left: none;
   font-size: 15px;
@@ -125,17 +132,18 @@
   cursor: pointer;
   transition: background 0.18s, color 0.18s;
 }
+
 .newsletter-form button:hover {
   background: #fff;
   color: #14191f;
 }
 
 .footer-bottom {
-  background: #232323;        
+  background: #232323;
   width: 100%;
-  margin-top: 0;               
-  padding: 16px 4vw 10px 4vw;  
-  border-top: 1px solid #dad9d4;
+  margin-top: 0;
+  padding: 20px 4vw;
+  border-top: 1px solid #3a3a3a;
   font-size: 14px;
   color: #dad9d4;
   display: flex;
@@ -144,16 +152,33 @@
   flex-wrap: wrap;
 }
 
+.footer-bottom p {
+  margin: 0;
+}
+
 .developed-by {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 12px;
-  opacity: 0.9;
+  font-size: 13px;
+  color: #dad9d4;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  transition: background 0.3s ease;
+  text-decoration: none;
+  cursor: pointer;
 }
+
+.developed-by:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
 .developer-logo {
-  height: 22px;
+  height: 24px;
   width: auto;
+  border-radius: 3px;
 }
 
 @media (max-width: 900px) {
@@ -162,17 +187,24 @@
     align-items: stretch;
     gap: 24px;
   }
+  
   .footer-right {
     align-items: flex-start;
   }
+  
   .footer-newsletter {
     width: 100%;
   }
+  
   .footer-bottom {
     flex-direction: column;
     align-items: flex-start;
     font-size: 13px;
-    padding: 10px 4vw;
-    gap: 8px;
+    padding: 16px 4vw;
+    gap: 12px;
+  }
+  
+  .developed-by {
+    align-self: flex-start;
   }
 }

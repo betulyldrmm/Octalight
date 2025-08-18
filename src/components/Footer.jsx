@@ -34,14 +34,19 @@ const Footer = () => (
     </div>
     <div className="footer-bottom">
       <p>© 2025 OCTALIGHT — Tüm hakları saklıdır</p>
-      <div className="developed-by">
+      <a 
+        href="https://www.ndmsoftware.com/contact" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="developed-by"
+      >
         <span>Developed by</span>
         <img
           src={ndmsoftwarelogo}
           alt="NDM Software Logo"
           className="developer-logo"
         />
-      </div>
+      </a>
     </div>
   </footer>
 );

@@ -57,7 +57,7 @@ const Header = () => {
             <li><a href="/tasarimcilar" className="nav-link">TASARIMCIMIZ</a></li>
             <li><a href="/vizyonmisyon" className="nav-link">VİZYON-MİSYON</a></li>
             <li><a href="/contact" className="nav-link">İLETİŞİM</a></li>
-            <li><a href='/auth' className='nav-link'>Giriş</a></li>
+           ,
           </ul>
         </nav>
 
@@ -100,26 +100,37 @@ const Header = () => {
             )}
           </div>
 
-        <div className="header-icons">
-  <button className="icon-btn search-btn" aria-label="Search">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-      <circle cx="11" cy="11" r="8" stroke="currentColor" strokeWidth="2" />
-      <path d="m21 21-4.35-4.35" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  </button>
+      
+  
 
-  <button className="icon-btn profile-btn" aria-label="Profile">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-      <circle cx="12" cy="7" r="4" stroke="currentColor" strokeWidth="2" />
-    </svg>
-  </button>
+  <a href="/auth" className="nav-link">
+    <button className="icon-btn profile-btn" aria-label="Profile">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+        <path
+          d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <circle
+          cx="12"
+          cy="7"
+          r="4"
+          stroke="currentColor"
+          strokeWidth="2"
+        />
+      </svg>
+    </button>
+  </a>
+
+
   
 
   
 </div>
         </div>
-      </div>
+    
     </header>
   );
 };

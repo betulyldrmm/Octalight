@@ -1,15 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import './Donme.css';
 
-import lamba1 from '../assets/lamba1.jpg';
+import lamba1 from '../assets/7.jpg';
+import lamba2 from '../assets/8.jpg';
+import lamba3 from '../assets/9.jpg';
+import lamba4 from '../assets/10.jpg';
+import lamba5 from '../assets/13.jpg';
+import lamba6 from '../assets/12.jpg';
 
 const urunler = [
   { id: 1, image: lamba1 },
-  { id: 2, image: lamba1 },
-  { id: 3, image: lamba1 },
-  { id: 4, image: lamba1 },
-  { id: 5, image: lamba1 },
-  { id: 6, image: lamba1 }
+  { id: 2, image: lamba2 },
+  { id: 3, image: lamba3 },
+  { id: 4, image: lamba4 },
+  { id: 5, image: lamba5 },
+  { id: 6, image: lamba6 }
 ];
 
 const Donme = () => {

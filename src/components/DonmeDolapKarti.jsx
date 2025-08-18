@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './DonmeDolapKarti.css';
 
-import goldenHour from '../assets/1.jpg';
-import nest from '../assets/2.jpg';
-import pearls from '../assets/3.jpg';
-import ironmute from '../assets/4.jpg';
+import goldenHour from '../assets/22.jpg';
+import nest from '../assets/33.jpg';
+import pearls from '../assets/44.jpg';
+import ironmute from '../assets/12.jpg';
 
 const urunler = [
   { id: 1, baslik: "GOLDEN HOUR", image: goldenHour, path: "/golden" },
@@ -40,7 +40,7 @@ const DonmeDolapKarti = () => {
             <img src={item.image} alt={item.baslik} />
             <h3>{item.baslik}</h3>
             <button
-              className="yeni-kesfet-btn"
+              className="yenii-kesfet-btn"
               onClick={() => navigate(item.path)}
             >
               KEŞFET

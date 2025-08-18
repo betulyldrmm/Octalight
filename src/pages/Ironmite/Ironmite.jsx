@@ -8,7 +8,7 @@ import { FaHome, FaList, FaGem } from 'react-icons/fa';
 import Header from '../../components/Header';
 import ScrollToTop from '../../components/ScrollToTop';
 
-import heroImage from '../../assets/hero.jpg';
+import heroImage from '../../assets/9.jpg';
 
 import Donme from '../../components/Donme';
 import ResimKismi4 from '../../components/ResimKismi4';
@@ -52,19 +52,19 @@ const Ironmite= () => {
       <Header />
       <ScrollToTop />
 
-      <div className="page-container">
-        <div className="sidebar">
-          <Link to="/" className="sidebar-link">
+      <div className="page-containere">
+        <div className="sidebarrr">
+          <Link to="/" className="sidebarrr-link">
             <FaHome />
-            <span>Home</span>
+            <span className='sidebarrr-text'>Home</span>
           </Link>
-          <Link to="/koleksiyon" className="sidebar-link">
+          <Link to="/koleksiyon" className="sidebarrr-link">
             <FaList />
-            <span>Collection</span>
+            <span className='sidebarrr-text'>Collection</span>
           </Link>
-          <div className="sidebar-link active">
+          <div className="sidebarrr-link active">
             <FaGem />
-            <span>Ironmite</span>
+            <span className='sidebarrr-text'>Ironmite</span>
           </div>
         </div>
 <div className="scroll-down-container" onClick={scrollToContent}>

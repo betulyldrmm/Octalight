@@ -1,8 +1,8 @@
 import './ResimKismi.css';
 
-import img1 from "../assets/lamp.jpg";
-import img2 from "../assets/1.jpg";
-import img3 from "../assets/2.jpg";
+import img1 from "../assets/22.jpg";
+import img2 from "../assets/33.jpg";
+import img3 from "../assets/44.jpg";
 
 const contentData = [
  

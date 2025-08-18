@@ -1,7 +1,8 @@
 import React from 'react';
 import './VizyonMisyon.css';
 import Header from '../../components/Header';
-import lamba from '../../assets/1.jpg';
+import lamba from '../../assets/6.jpg';
+import lamba1 from '../../assets/7.jpg';
 
 const VizyonMisyon = () => {
   return (
@@ -57,7 +58,7 @@ const VizyonMisyon = () => {
                 <img src={lamba} alt="Vizyon görüntüsü" className="vizyon-image" />
               </div>
               <div className="image-container">
-                <img src={lamba} alt="Misyon görüntüsü" className="misyon-image" />
+                <img src={lamba1} alt="Misyon görüntüsü" className="misyon-image" />
               </div>
             </div>
           </div>

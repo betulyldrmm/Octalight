@@ -1,5 +1,5 @@
 import React from 'react';
-import bgImage from '../assets/arkaplan.jpg';
+import bgImage from '../assets/14.jpg';
 import Header from '../components/Header';
 import DonmeDolapKarti from '../components/DonmeDolapKarti';
 

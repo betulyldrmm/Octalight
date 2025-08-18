@@ -22,7 +22,7 @@ body {
   line-height: 1.6;
 }
 
-.page-container {
+.page-containere {
   background: var(--bg-primary);
   min-height: 100vh;
   overflow-x: hidden;
@@ -94,7 +94,7 @@ body {
 }
 
 .hero-title {
-  font-size: clamp(3.5rem, 8vw, 6rem);
+  font-size: clamp(2.5rem, 6vw, 4rem);
   font-weight: 700;
  
  color: rgb(252, 252, 252);
@@ -104,7 +104,7 @@ body {
 }
 
 .hero-subtitle {
-  font-size: clamp(0.8rem, 3vw, 1.8rem);
+  font-size: clamp(0.8rem, 2vw, 1rem);
   color: #fff;
   margin-bottom: 30px;
 }
@@ -159,7 +159,7 @@ body {
 .scroll-down-container:hover .scroll-down-arrow svg {
   color: #FCFCFC;
 }
-.sidebar-link {
+.sidebarrr-link {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -171,17 +171,19 @@ body {
   font-size: 1rem;
 }
 
-.sidebar-link:hover {
+.sidebarrr-link:hover {
   background: rgba(212, 175, 55, 0.1);
   color: var(--accent-gold);
   transform: translateX(5px);
 }
 
-.sidebar-link.active {
+.sidebarrr-link.active {
   background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-hover));
   color: white;
 }
-
+.sidebarrr-text{
+  font-size: 10px;
+}
 .breadcrumb {
   position: fixed;
   top: 30px;

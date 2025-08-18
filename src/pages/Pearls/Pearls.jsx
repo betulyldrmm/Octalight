@@ -8,7 +8,7 @@ import { FaHome, FaList, FaGem } from 'react-icons/fa';
 import Header from '../../components/Header';
 import ScrollToTop from '../../components/ScrollToTop';
 
-import heroImage from '../../assets/hero.jpg';
+import heroImage from '../../assets/12.jpg';
 
 
 import Donme from '../../components/Donme';
@@ -56,16 +56,16 @@ const scrollToContent = () => {
       <ScrollToTop />
 
       <div className="page-container">
-        <div className="sidebar">
-          <Link to="/" className="sidebar-link">
+        <div className="sidebarrr">
+          <Link to="/" className="sidebarrr-link">
             <FaHome />
             <span>Home</span>
           </Link>
-          <Link to="/koleksiyon" className="sidebar-link">
+          <Link to="/koleksiyon" className="sidebarrr-link">
             <FaList />
             <span>Collection</span>
           </Link>
-          <div className="sidebar-link active">
+          <div className="sidebarrr-link active">
             <FaGem />
             <span>Pearls</span>
           </div>
@@ -93,10 +93,19 @@ const scrollToContent = () => {
             </div>
           </div>
         </div>
+ <Donme />
+        <div className="collection-story">
+          <div className="story-content">
+            <h2 className="story-title" data-aos="fade-up">
+              PEARLS COLLECTION
+            </h2>
+            <p className="story-subtitle" data-aos="fade-up" data-aos-delay="200">
+              The perfect harmony of light and design
+            </p>
+          </div>
+          </div>
 
-        <br /><br /><br />
-
-        <Donme />
+       
 
         {/* contentDataa dizisini ResimKismi bileşenine prop olarak gönderiyoruz */}
         <ResimKismi3></ResimKismi3>
