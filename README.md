@@ -1,16 +1,35 @@
-HEAD
-# React + Vite
+# 💡 OctaLight — Lamba Tasarımcısı Web Sitesi
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bu proje, **OctaLight** markası için geliştirilmiş modern ve kullanıcı odaklı bir web sitesidir.  
+Amaç; tasarımcıya ait **lamba koleksiyonlarını sergilemek**, kullanıcıların iletişim kurmasını sağlamak ve admin paneli üzerinden içerik yönetimini kolaylaştırmaktır.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🧾 Proje Özeti
+OctaLight Web Sitesi, tasarımcının yarattığı ışık ve lamba koleksiyonlarını kullanıcı dostu bir arayüzle sunar.  
+Koleksiyonlar, isimleriyle kategorize edilmiş ve her ürün detay sayfasında görseller, açıklamalar ve teknik bilgiler yer alır.  
+Ziyaretçiler **Email.js** ile iletişim kurabilir; admin ise **Node.js** backend sayesinde projeleri ve koleksiyonları yönetebilir.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# EnneWeb
-ac2d77d053d8d3c5e9762eff9d209f5c51d98938
+## 🚩 Ana Bölümler
+- **Ana Sayfa** — Kurumsal tanıtım ve öne çıkan koleksiyonlar.  
+- **Koleksiyonlar** — Tasarımcının tüm lamba koleksiyonları:  
+  - Koleksiyon 1: *Golden Hour*  
+  - Koleksiyon 2: *Nest*  
+  - Koleksiyon 3: *Pearls*  
+  - Koleksiyon 4: *Ironmute*  
+- **Ürün Detay Sayfası** — Her lambanın görselleri, açıklamaları ve teknik özellikleri.  
+- **İletişim Formu** — Email.js entegrasyonu ile kullanıcıların tasarımcıya mesaj göndermesi.  
+- **Admin Paneli** — Node.js backend üzerinden koleksiyon ve ürün yönetimi, içerik güncellemeleri.  
+
+---
+
+## 🛠 Kullanılan Teknolojiler
+- **Frontend:** React.js, HTML5, CSS3, JavaScript (ES6+)  
+- **Backend:** Node.js (Admin paneli, veri yönetimi)  
+- **E-posta:** Email.js ile iletişim formu  
+- **Veritabanı:** MySQL
+
+---
+
