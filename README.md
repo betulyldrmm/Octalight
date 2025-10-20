@@ -26,7 +26,7 @@ Ziyaretçiler **Email.js** ile iletişim kurabilir; admin ise **Node.js** backen
 ---
 
 ## 🛠 Kullanılan Teknolojiler
-- **Frontend:** React.js, HTML5, CSS3, JavaScript (ES6+)  
+- **Frontend:** React.js, HTML5, CSS3, JavaScript 
 - **Backend:** Node.js (Admin paneli, veri yönetimi)  
 - **E-posta:** Email.js ile iletişim formu  
 - **Veritabanı:** MySQL
